@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>高性能mysql</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/to-be-bast/favicon.ico">
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?928c7c5c1127ed68793a835c728ec9be";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+        </script>
+    <meta name="description" content="zwx-haha个人技术文档">
+    
+    <link rel="preload" href="/to-be-bast/assets/css/0.styles.be698e14.css" as="style"><link rel="preload" href="/to-be-bast/assets/js/app.c3e67182.js" as="script"><link rel="preload" href="/to-be-bast/assets/js/2.a97ad3d5.js" as="script"><link rel="preload" href="/to-be-bast/assets/js/46.885b14aa.js" as="script"><link rel="prefetch" href="/to-be-bast/assets/js/10.c5262efb.js"><link rel="prefetch" href="/to-be-bast/assets/js/11.c59ed9e2.js"><link rel="prefetch" href="/to-be-bast/assets/js/12.9f0a73c1.js"><link rel="prefetch" href="/to-be-bast/assets/js/13.17a058af.js"><link rel="prefetch" href="/to-be-bast/assets/js/14.db6b1266.js"><link rel="prefetch" href="/to-be-bast/assets/js/15.21e0cede.js"><link rel="prefetch" href="/to-be-bast/assets/js/16.430911cf.js"><link rel="prefetch" href="/to-be-bast/assets/js/17.658f2682.js"><link rel="prefetch" href="/to-be-bast/assets/js/18.bcaa61e8.js"><link rel="prefetch" href="/to-be-bast/assets/js/19.76f74703.js"><link rel="prefetch" href="/to-be-bast/assets/js/20.b2ef81e3.js"><link rel="prefetch" href="/to-be-bast/assets/js/21.3539e5c6.js"><link rel="prefetch" href="/to-be-bast/assets/js/22.45f1fd04.js"><link rel="prefetch" href="/to-be-bast/assets/js/23.f7057a81.js"><link rel="prefetch" href="/to-be-bast/assets/js/24.871f1c42.js"><link rel="prefetch" href="/to-be-bast/assets/js/25.9dbd80cb.js"><link rel="prefetch" href="/to-be-bast/assets/js/26.813bd17d.js"><link rel="prefetch" href="/to-be-bast/assets/js/27.77edb239.js"><link rel="prefetch" href="/to-be-bast/assets/js/28.3217d365.js"><link rel="prefetch" href="/to-be-bast/assets/js/29.2969c686.js"><link rel="prefetch" href="/to-be-bast/assets/js/3.0d77f0c3.js"><link rel="prefetch" href="/to-be-bast/assets/js/30.c1e77f7b.js"><link rel="prefetch" href="/to-be-bast/assets/js/31.a2723f65.js"><link rel="prefetch" href="/to-be-bast/assets/js/32.51203b3b.js"><link rel="prefetch" href="/to-be-bast/assets/js/33.39ad8118.js"><link rel="prefetch" href="/to-be-bast/assets/js/34.5ee668ce.js"><link rel="prefetch" href="/to-be-bast/assets/js/35.8b547770.js"><link rel="prefetch" href="/to-be-bast/assets/js/36.2acc3458.js"><link rel="prefetch" href="/to-be-bast/assets/js/37.077c6e56.js"><link rel="prefetch" href="/to-be-bast/assets/js/38.11563a61.js"><link rel="prefetch" href="/to-be-bast/assets/js/39.07d7a301.js"><link rel="prefetch" href="/to-be-bast/assets/js/4.d12742be.js"><link rel="prefetch" href="/to-be-bast/assets/js/40.30a9124a.js"><link rel="prefetch" href="/to-be-bast/assets/js/41.a2876b17.js"><link rel="prefetch" href="/to-be-bast/assets/js/42.67ec8031.js"><link rel="prefetch" href="/to-be-bast/assets/js/43.000c7c57.js"><link rel="prefetch" href="/to-be-bast/assets/js/44.ebcefafd.js"><link rel="prefetch" href="/to-be-bast/assets/js/45.c0542bf1.js"><link rel="prefetch" href="/to-be-bast/assets/js/47.bad3ee03.js"><link rel="prefetch" href="/to-be-bast/assets/js/48.5cae63f1.js"><link rel="prefetch" href="/to-be-bast/assets/js/49.f7f0e9bd.js"><link rel="prefetch" href="/to-be-bast/assets/js/5.216cae74.js"><link rel="prefetch" href="/to-be-bast/assets/js/50.0f8dfcf4.js"><link rel="prefetch" href="/to-be-bast/assets/js/51.2c964dc0.js"><link rel="prefetch" href="/to-be-bast/assets/js/52.e12923d4.js"><link rel="prefetch" href="/to-be-bast/assets/js/53.8e58b6aa.js"><link rel="prefetch" href="/to-be-bast/assets/js/54.9c0c208f.js"><link rel="prefetch" href="/to-be-bast/assets/js/55.0d700812.js"><link rel="prefetch" href="/to-be-bast/assets/js/56.3c84f5d6.js"><link rel="prefetch" href="/to-be-bast/assets/js/57.3813517d.js"><link rel="prefetch" href="/to-be-bast/assets/js/58.d2454e98.js"><link rel="prefetch" href="/to-be-bast/assets/js/59.00a0b442.js"><link rel="prefetch" href="/to-be-bast/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/to-be-bast/assets/js/60.dc71c357.js"><link rel="prefetch" href="/to-be-bast/assets/js/61.243b7158.js"><link rel="prefetch" href="/to-be-bast/assets/js/62.ed7cb8b4.js"><link rel="prefetch" href="/to-be-bast/assets/js/63.e40f2c54.js"><link rel="prefetch" href="/to-be-bast/assets/js/64.84f845fd.js"><link rel="prefetch" href="/to-be-bast/assets/js/65.0cea4cc9.js"><link rel="prefetch" href="/to-be-bast/assets/js/66.2d776da3.js"><link rel="prefetch" href="/to-be-bast/assets/js/67.eeaa7ab3.js"><link rel="prefetch" href="/to-be-bast/assets/js/68.bb2e319b.js"><link rel="prefetch" href="/to-be-bast/assets/js/69.5363dc47.js"><link rel="prefetch" href="/to-be-bast/assets/js/7.2f0859e3.js"><link rel="prefetch" href="/to-be-bast/assets/js/70.f5829a44.js"><link rel="prefetch" href="/to-be-bast/assets/js/71.3226e5b5.js"><link rel="prefetch" href="/to-be-bast/assets/js/72.4bc7c7a3.js"><link rel="prefetch" href="/to-be-bast/assets/js/73.4f01d8fc.js"><link rel="prefetch" href="/to-be-bast/assets/js/74.455ffd32.js"><link rel="prefetch" href="/to-be-bast/assets/js/75.adbb6e85.js"><link rel="prefetch" href="/to-be-bast/assets/js/76.8aeea110.js"><link rel="prefetch" href="/to-be-bast/assets/js/77.f4e5bcff.js"><link rel="prefetch" href="/to-be-bast/assets/js/78.0eb64265.js"><link rel="prefetch" href="/to-be-bast/assets/js/79.2155f6c9.js"><link rel="prefetch" href="/to-be-bast/assets/js/8.28816398.js"><link rel="prefetch" href="/to-be-bast/assets/js/9.c31128b6.js">
+    <link rel="stylesheet" href="/to-be-bast/assets/css/0.styles.be698e14.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/to-be-bast/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/to-be-bast/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="你皮05的 Java 博客" class="dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="你皮05的 Java 博客" class="mobile-dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/haha-zwx-ooo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/to-be-bast/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="你皮05的 Java 博客" class="dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="你皮05的 Java 博客" class="mobile-dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/haha-zwx-ooo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/to-be-bast/" aria-current="page" class="sidebar-link">职业技能</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/basic/Java数据类型" class="sidebar-heading clickable"><span>Java基础知识</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/core/多线程一" class="sidebar-heading clickable"><span>Java核心技术</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/web/servlet" class="sidebar-heading clickable"><span>JavaWeb</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/db/db" class="sidebar-heading clickable open"><span>数据库</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/to-be-bast/db/mysql.html" class="sidebar-link">mysql</a></li><li><a href="/to-be-bast/db/mysql2.html" aria-current="page" class="active sidebar-link">高性能mysql</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql2.html#并发控制" class="sidebar-link">并发控制</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql2.html#事务" class="sidebar-link">事务</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql2.html#数据存储" class="sidebar-link">数据存储</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql2.html#性能优化" class="sidebar-link">性能优化</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql2.html#分析单条查询" class="sidebar-link">分析单条查询</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql2.html#查询优化" class="sidebar-link">查询优化</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql2.html#mysql复制" class="sidebar-link">mysql复制</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql2.html#mysql扩展" class="sidebar-link">mysql扩展</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql2.html#高可用" class="sidebar-link">高可用</a></li></ul></li><li><a href="/to-be-bast/db/mongodb.html" class="sidebar-link">mongodb</a></li><li><a href="/to-be-bast/db/es.html" class="sidebar-link">es</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/designpattern/designpattern" class="sidebar-heading clickable"><span>设计模式</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/frame/frame" class="sidebar-heading clickable"><span>框架和工具</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/cache/cache" class="sidebar-heading clickable"><span>缓存</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/mq/mq" class="sidebar-heading clickable"><span>消息队列</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/lock/lock" class="sidebar-heading clickable"><span>分布式锁</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/tr/tr" class="sidebar-heading clickable"><span>分布式事务</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="高性能mysql"><a href="#高性能mysql" class="header-anchor">#</a> 高性能mysql</h1> <h2 id="并发控制"><a href="#并发控制" class="header-anchor">#</a> 并发控制</h2> <ul><li>读写锁</li></ul> <blockquote><p>读共享,写互斥</p></blockquote> <ul><li>锁粒度</li></ul> <blockquote><p>表锁,行锁</p></blockquote> <h2 id="事务"><a href="#事务" class="header-anchor">#</a> 事务</h2> <ul><li>ACID</li></ul> <blockquote><p>原子性,隔离性,一致性,持久性</p></blockquote> <ul><li>隔离级别</li></ul> <blockquote><ol><li>READ UNCOMMITTED(读未提交) -- 脏读 <br></li> <li>READ COMMITTED(读已提交)  -- 不可重复读<br></li> <li>REPEATABLE READ(可重复度) -- 幻读<br>  mysql默认事务隔离级别</li> <li>SERIALIZABLE(可串行化)  -- 读取数据每一行都加锁</li></ol></blockquote> <ul><li>死锁</li></ul> <blockquote><p>多个事务交替执行,在同一资源互相占用,互相等待, 死锁检测和死锁超时</p></blockquote> <ul><li>MVCC 多版本并发控制</li></ul> <blockquote><p>InnoDB 的mvcc 是通过在每行记录后面保存2个隐藏列实现的,一个保存了行的创建时间,一个保存了行的删除时间
+具体存储的内容是系统版本号(system version number),每开启一个新的事务,系统版本号就会自动递增<br></p></blockquote> <p>来看下,在REPEATABLE READ隔离级别下,mvcc具体是如何操作的:</p> <ol><li><p>SELECT</p> <ul><li>行的创建版本号&lt;= 当前事务的版本号,可以确保事务读取的行要么是开始前就存在的,要么是当前事务插入或者修改的</li> <li>行的删除版本号要么未定义,要么&gt;当前事务版本号,这样可以确保事务读取的数据,在事务开始之前未被删除</li></ul></li> <li><p>INSERT</p> <p>InnoDB为新插入的每一行保存当前系统版本号作为行版本号</p></li> <li><p>DELETE</p> <p>InnoDB为新删除的每一行保存当前系统版本号作为行删除版本号</p></li> <li><p>UPDATE</p> <p>InnoDB为插入一行新记录,保存当前系统版本号,作为创建版本号,同时保存当前系统版本号到原来的行作为删除版本号</p></li></ol> <p>MVCC 只在READ COMMITTED(读已提交)和REPEATABLE READ(可重复度)两个隔离级别下工作.</p> <h2 id="数据存储"><a href="#数据存储" class="header-anchor">#</a> 数据存储</h2> <p>在mysql,文件存储目录,每新建一个数据库,会多一个数据库名称的文件夹,在该文件目录下,每一个表有
+.frm 文件保存表的定义</p> <p>InnoDB存储引擎下:</p> <p>（1）*.frm--表结构的文件。</p> <p>（2）*.ibd--表数据和索引的文件。该表的索引(B+树)的每个非叶子节点存储索引，叶子节点存储索引和索引对应的数据。</p> <p>Myisam存储引擎下:
+（1）*.frm--表定义，是描述表结构的文件。</p> <p>（2）*.MYD--&quot;D&quot;数据信息文件，是表的数据文件。</p> <p>（3）*.MYI--&quot;I&quot;索引信息文件，是表数据文件中任何索引的数据树</p> <p>例如:</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@mysql1 ~<span class="token punctuation">]</span><span class="token comment"># cd /var/lib/mysql</span>
+<span class="token punctuation">[</span>root@mysql1 mysql<span class="token punctuation">]</span><span class="token comment"># ll</span>
+总用量 <span class="token number">110608</span>
+-rw-rw----. <span class="token number">1</span> mysql mysql       <span class="token number">56</span> <span class="token number">4</span>月  <span class="token number">20</span> 01:32 auto.cnf
+drwx------. <span class="token number">2</span> mysql mysql     <span class="token number">4096</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:05 haha_test
+-rw-rw----. <span class="token number">1</span> mysql mysql <span class="token number">12582912</span> <span class="token number">4</span>月  <span class="token number">21</span> <span class="token number">17</span>:54 ibdata1
+-rw-rw----. <span class="token number">1</span> mysql mysql <span class="token number">50331648</span> <span class="token number">4</span>月  <span class="token number">21</span> <span class="token number">17</span>:54 ib_logfile0
+-rw-rw----. <span class="token number">1</span> mysql mysql <span class="token number">50331648</span> <span class="token number">4</span>月  <span class="token number">20</span> 01:32 ib_logfile1
+drwx------. <span class="token number">2</span> mysql mysql     <span class="token number">4096</span> <span class="token number">4</span>月  <span class="token number">20</span> 01:32 mysql
+srwxrwxrwx. <span class="token number">1</span> mysql mysql        <span class="token number">0</span> <span class="token number">4</span>月  <span class="token number">21</span> <span class="token number">17</span>:54 mysql.sock
+drwx------. <span class="token number">2</span> mysql mysql     <span class="token number">4096</span> <span class="token number">4</span>月  <span class="token number">20</span> 01:32 performance_schema
+<span class="token punctuation">[</span>root@mysql1 mysql<span class="token punctuation">]</span><span class="token comment"># cd haha_test/</span>
+<span class="token punctuation">[</span>root@mysql1 haha_test<span class="token punctuation">]</span><span class="token comment"># ll</span>
+总用量 <span class="token number">616</span>
+-rw-rw----. <span class="token number">1</span> mysql mysql   <span class="token number">8906</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:05 customers.frm
+-rw-rw----. <span class="token number">1</span> mysql mysql  <span class="token number">98304</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:06 customers.ibd
+-rw-rw----. <span class="token number">1</span> mysql mysql     <span class="token number">61</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">14</span>:59 db.opt
+-rw-rw----. <span class="token number">1</span> mysql mysql   <span class="token number">8728</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:05 orderitems.frm
+-rw-rw----. <span class="token number">1</span> mysql mysql <span class="token number">114688</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:06 orderitems.ibd
+-rw-rw----. <span class="token number">1</span> mysql mysql   <span class="token number">8648</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:05 orders.frm
+-rw-rw----. <span class="token number">1</span> mysql mysql <span class="token number">114688</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:06 orders.ibd
+-rw-rw----. <span class="token number">1</span> mysql mysql   <span class="token number">8682</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:05 productnotes.frm
+-rw-rw----. <span class="token number">1</span> mysql mysql   <span class="token number">1896</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:06 productnotes.MYD
+-rw-rw----. <span class="token number">1</span> mysql mysql   <span class="token number">6144</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:06 productnotes.MYI
+-rw-rw----. <span class="token number">1</span> mysql mysql   <span class="token number">8724</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:05 products.frm
+-rw-rw----. <span class="token number">1</span> mysql mysql <span class="token number">114688</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:06 products.ibd
+-rw-rw----. <span class="token number">1</span> mysql mysql   <span class="token number">8818</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:05 vendors.frm
+-rw-rw----. <span class="token number">1</span> mysql mysql  <span class="token number">98304</span> <span class="token number">4</span>月  <span class="token number">20</span> <span class="token number">15</span>:06 vendors.ibd
+</code></pre></div><h2 id="性能优化"><a href="#性能优化" class="header-anchor">#</a> 性能优化</h2> <p>优化原则是降低响应时间,而不是说降低资源消耗,cpu,内存,利用率高并不是坏事.</p> <h3 id="慢查询监控"><a href="#慢查询监控" class="header-anchor">#</a> 慢查询监控</h3> <p>为了降低响应时间,必须要知道响应时间是多,这个利用mysql的慢查询日志</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># 慢查询日志</span>
+
+<span class="token comment"># 慢查询是否开启及日志保存位置</span>
+<span class="token keyword">show</span> variables <span class="token operator">like</span> <span class="token string">'slow_query%'</span><span class="token punctuation">;</span>
+
+<span class="token comment"># slow_query_log,OFF</span>
+<span class="token comment"># slow_query_log_file,/var/lib/mysql/mysql1-slow.log</span>
+
+
+<span class="token comment"># 慢查询时间</span>
+<span class="token keyword">show</span> variables <span class="token operator">like</span> <span class="token string">'long_query_time'</span><span class="token punctuation">;</span>
+
+
+<span class="token comment"># 开启慢查询</span>
+<span class="token keyword">set</span> <span class="token keyword">global</span> slow_query_log <span class="token operator">=</span> <span class="token string">'ON'</span><span class="token punctuation">;</span>
+<span class="token comment"># 设置日志位置</span>
+<span class="token keyword">set</span> <span class="token keyword">global</span> slow_query_log_file <span class="token operator">=</span> <span class="token string">'/var/lib/mysql/mysql1-slow.log'</span><span class="token punctuation">;</span>
+<span class="token comment"># 设置慢查询时间，单位（秒）</span>
+<span class="token keyword">set</span> <span class="token keyword">global</span> long_query_time <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 这里为了监控所有sql,设置慢查询时间为0</span>
+<span class="token keyword">set</span> <span class="token keyword">global</span> long_query_time <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 设置参数后,要重新打开新的连接,查询才会生效</span>
+<span class="token comment"># long_query_time,0.000000</span>
+</code></pre></div><p>测试慢sql监控</p> <div class="language-sql extra-class"><pre class="language-sql"><code>
+<span class="token keyword">select</span> cust_id<span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> orders
+<span class="token keyword">from</span> orders
+
+<span class="token comment"># 日志内容  start</span>
+<span class="token keyword">SET</span> <span class="token keyword">timestamp</span> <span class="token operator">=</span> <span class="token number">1682079377</span><span class="token punctuation">;</span>
+<span class="token comment">/* ApplicationName=IntelliJ IDEA 2023.1 */</span> <span class="token keyword">SET</span> SQL_SELECT_LIMIT <span class="token operator">=</span> <span class="token number">501</span><span class="token punctuation">;</span>
+<span class="token comment"># User@Host: root[root] @  [192.168.5.1]  Id:     6</span>
+<span class="token comment"># Query_time: 0.000714  Lock_time: 0.000179 Rows_sent: 1  Rows_examined: 5</span>
+<span class="token keyword">SET</span> <span class="token keyword">timestamp</span> <span class="token operator">=</span> <span class="token number">1682079377</span><span class="token punctuation">;</span>
+<span class="token comment">/* ApplicationName=IntelliJ IDEA 2023.1 */</span> <span class="token keyword">select</span> cust_id<span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> orders
+                                           <span class="token keyword">from</span> orders<span class="token punctuation">;</span>
+<span class="token comment"># User@Host: root[root] @  [192.168.5.1]  Id:     6</span>
+<span class="token comment"># Query_time: 0.000111  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0</span>
+<span class="token keyword">SET</span> <span class="token keyword">timestamp</span> <span class="token operator">=</span> <span class="token number">1682079377</span><span class="token punctuation">;</span>
+<span class="token keyword">SHOW</span> <span class="token keyword">WARNINGS</span><span class="token punctuation">;</span>
+<span class="token comment"># User@Host: root[root] @  [192.168.5.1]  Id:     6</span>
+<span class="token comment"># Query_time: 0.000155  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0</span>
+<span class="token keyword">SET</span> <span class="token keyword">timestamp</span> <span class="token operator">=</span> <span class="token number">1682079377</span><span class="token punctuation">;</span>
+<span class="token keyword">SELECT</span> @<span class="token variable">@session.tx_isolation</span><span class="token punctuation">;</span>
+<span class="token comment"># 日志内容  end</span>
+
+</code></pre></div><h3 id="mysql-慢查询分析工具-pt-query-digest"><a href="#mysql-慢查询分析工具-pt-query-digest" class="header-anchor">#</a> MySQL 慢查询分析工具 pt-query-digest</h3> <p>安装</p> <div class="language-shell extra-class"><pre class="language-shell"><code>yum <span class="token function">install</span> perl-Digest-MD5 <span class="token parameter variable">-y</span> 
+
+yum <span class="token function">install</span> perl-DBI <span class="token parameter variable">-y</span>
+
+yum <span class="token function">install</span> perl-DBD-MySQL <span class="token parameter variable">-y</span>
+
+yum <span class="token function">install</span> perl-Time-HiRes <span class="token parameter variable">-y</span>
+
+yum <span class="token function">install</span> perl-IO-Socket-SSL <span class="token parameter variable">-y</span>
+
+<span class="token function">wget</span> percona.com/get/pt-query-digest 
+
+<span class="token function">chmod</span> u+x pt-query-digest
+
+<span class="token function">mv</span> pt-query-digest /usr/bin/ 
+
+</code></pre></div><p>使用</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#1.直接分析慢查询文件</span>
+pt-query-digest  slow.log <span class="token operator">&gt;</span> slow_report.log
+</code></pre></div><p>结果分析</p> <ol><li>第一部分：总体统计结果</li></ol> <div class="language-text extra-class"><pre class="language-text"><code># 该工具执行日志分析的用户时间，系统时间，物理内存占用大小，虚拟内存占用大小
+# 340ms user time, 140ms system time, 23.99M rss, 203.11M vsz
+# 工具执行时间
+# Current date: Fri Nov 25 02:37:18 2016
+# 运行分析工具的主机名
+# Hostname: localhost.localdomain
+# 被分析的文件名
+# Files: slow.log
+# 语句总数量，唯一的语句数量，QPS，并发数
+# Overall: 2 total, 2 unique, 0.01 QPS, 0.01x concurrency ________________
+# 日志记录的时间范围
+# Time range: 2016-11-22 06:06:18 to 06:11:40
+# 属性               总计      最小    最大    平均    95%  标准    中等
+# Attribute          total     min     max     avg     95%  stddev  median
+# ============     ======= ======= ======= ======= ======= ======= =======
+# 语句执行时间
+# Exec time             3s   640ms      2s      1s      2s   999ms      1s
+# 锁占用时间
+# Lock time            1ms       0     1ms   723us     1ms     1ms   723us
+# 发送到客户端的行数
+# Rows sent              5       1       4    2.50       4    2.12    2.50
+# select语句扫描行数
+# Rows examine     186.17k       0 186.17k  93.09k 186.17k 131.64k  93.09k
+# 查询的字符数
+# Query size           455      15     440  227.50     440  300.52  227.50
+</code></pre></div><ol start="2"><li>查询分组统计结果</li></ol> <div class="language-text extra-class"><pre class="language-text"><code>Rank：所有语句的排名，默认按查询时间降序排列，通过 --order-by 指定
+
+Query ID：语句的 ID，（去掉多余空格和文本字符，计算 hash 值）
+
+Response：总的响应时间
+
+time：该查询在本次分析中总的时间占比
+
+calls：执行次数，即本次分析总共有多少条这种类型的查询语句
+
+R/Call：平均每次执行的响应时间
+
+V/M：响应时间 Variance-to-mean 的比率
+
+Item：查询对象
+
+
+# Profile
+# Rank Query ID           Response time Calls R/Call V/M   Item
+# ==== ================== ============= ===== ====== ===== ===============
+#    1 0xF9A57DD5A41825CA  2.0529 76.2%     1 2.0529  0.00 SELECT
+#    2 0x4194D8F83F4F9365  0.6401 23.8%     1 0.6401  0.00 SELECT wx_member_base
+</code></pre></div><ol start="3"><li>每一种查询的详细统计结果</li></ol> <div class="language-text extra-class"><pre class="language-text"><code>由下面查询的详细统计结果，最上面的表格列出了执行次数、最大、最小、平均、95% 等各项目的统计。
+
+ID：查询的 ID 号，和上图的 Query ID 对应
+
+Databases：数据库名
+
+Users：各个用户执行的次数（占比）
+
+Query_time distribution ：查询时间分布，长短体现区间占比，本例中 1s-10s 之间查询数量是 10s 以上的两倍。
+
+Tables：查询中涉及到的表
+
+Explain：SQL 语句
+
+
+# Query 1: 0 QPS, 0x concurrency, ID 0xF9A57DD5A41825CA at byte 802 ______
+# This item is included in the report because it matches --limit.
+# Scores: V/M = 0.00
+# Time range: all events occurred at 2016-11-22 06:11:40
+# Attribute    pct   total     min     max     avg     95%  stddev  median
+# ============ === ======= ======= ======= ======= ======= ======= =======
+# Count         50       1
+# Exec time     76      2s      2s      2s      2s      2s       0      2s
+# Lock time      0       0       0       0       0       0       0       0
+# Rows sent     20       1       1       1       1       1       0       1
+# Rows examine   0       0       0       0       0       0       0       0
+# Query size     3      15      15      15      15      15       0      15
+# String:
+# Databases    test
+# Hosts        192.168.8.1
+# Users        mysql
+# Query_time distribution
+#   1us
+#  10us
+# 100us
+#   1ms
+#  10ms
+# 100ms
+#    1s  ################################################################
+#  10s+
+# EXPLAIN /*!50100 PARTITIONS*/
+select sleep(2)\G
+</code></pre></div><h3 id="慢sql监控告警"><a href="#慢sql监控告警" class="header-anchor">#</a> 慢sql监控告警</h3> <p>如果做到准实时的话,只能在mysql 服务器部署一个agent,实时tail mysql-slow.log 然后将结果上传至分析服务器,
+在设置一批告警和推送策略.后面我们会具体实现一个mysql 慢查询监控告警平台</p> <h2 id="分析单条查询"><a href="#分析单条查询" class="header-anchor">#</a> 分析单条查询</h2> <ul><li>show profile</li></ul> <blockquote><p>该命令会展示 sql每个环节消耗时间,从而利于我们去优化</p></blockquote> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># 分析单条查询</span>
+
+<span class="token comment"># 开启 profile</span>
+<span class="token keyword">set</span> profiling <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 执行查询</span>
+<span class="token keyword">select</span> cust_id<span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> orders
+<span class="token keyword">from</span> orders<span class="token punctuation">;</span>
+
+<span class="token comment"># 分析结果</span>
+<span class="token keyword">show</span> profiles<span class="token punctuation">;</span>
+
+<span class="token keyword">show</span> profile <span class="token keyword">for</span> query <span class="token number">12</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="合理使用数据类型"><a href="#合理使用数据类型" class="header-anchor">#</a> 合理使用数据类型</h3> <p>如果情况允许,都设置 字段非null,默认空字符串或者0
+无符号的,去掉符号位,增大空间</p> <p>整形(tinyint int long)<br>
+字符串(char varchar text)<br>
+char 定长,会吃掉尾部的空格,空间连续且固定<br>
+varchar非定长,浪费空间,且在改变长度时,会增大碎片, 原理是 字符串+字符串长度 + 预留空间<br></p> <h3 id="范式和反范式"><a href="#范式和反范式" class="header-anchor">#</a> 范式和反范式</h3> <p>说白了就是合理的数据冗余,避免宽表(反范式)和过多的表关联(范式)</p> <h3 id="合理利用索引"><a href="#合理利用索引" class="header-anchor">#</a> 合理利用索引</h3> <p>InnoDB 模式下,索引分为两类:</p> <ul><li>hash索引 (无序高效)</li> <li>b-tree 索引 (有序高效</li></ul> <p>需要注意的是在使用b-tree索引时要注意 最左匹配,这个是复合索引 数据结构特性 要求的</p> <ul><li>索引大大减少了服务器需要扫描的数据量</li> <li>索引可以帮助服务器避免排序和临时表</li> <li>索引可以将随机io变为顺序io</li></ul> <p>不过需要说的是,索引并不是最好的解决方案,对于数据量小的表,全表扫描反而更高效<br>
+而对于数据量特别大的表,索引的维护也会吃掉很多资源,不是那么便捷,对于中大型数据表来说最好</p> <p>对与超大数据表,最好用表分区,或者直接分派,拆表或者拆库</p> <ul><li>怎么合理的选择列创建索引</li></ul> <ol><li>避免大字符串索引(索引维护很消耗资源,和redis避免大key一个道理) 如果必须 则使用前缀索引(即大字符的前固定字符串)</li> <li>多列索引-复合索引 必须要选择合适的索引顺序</li> <li>聚簇索引(主键索引),主键应该离散和有序,在写操作时高效</li> <li>非聚簇索引,又称覆盖索引,注意查询列,避免回表</li> <li>冗余和重复索引,mysql允许在一个列或者多个列重复创建索引</li> <li>索引和锁,缩小查询行数,锁的粒度就会大大缩小,增大并发</li> <li>索引碎片修复,避免随机io,简单做法就一个空的ALTER TABLE</li></ol> <h2 id="查询优化"><a href="#查询优化" class="header-anchor">#</a> 查询优化</h2> <ol><li>避免查询不需要的记录 也就是 禁止使用 select *</li> <li>避免扫描过多的行,就是 sql执行过程中,扫描行数 应该无限 接近 返回行数</li> <li>复杂sql拆分,直白点就是分解sql,分批次执行避免长时间 占有锁</li> <li>show full processlist 查看连接线程状态</li> <li>表分区/分片</li></ol> <h2 id="mysql复制"><a href="#mysql复制" class="header-anchor">#</a> mysql复制</h2> <p>主从数据库<br> <img src="/to-be-bast/images/mysql%E5%A4%8D%E5%88%B6.png" alt="mysql复制"></p> <ol><li>数据多中心容灾</li> <li>数据备份</li> <li>读写分离</li></ol> <p>过程</p> <ol><li>主库将提交事务的记录写字binlog日志中</li> <li>从库会有一个线程网络IO读取主库的binlog日志,写在自己的relay-log日志末尾</li> <li>从库会有一个线程读取relay-log 日志写入自己的数据库中</li></ol> <p>问题</p> <ol><li>数据丢失</li> <li>数据延迟</li> <li>数据不一致</li></ol> <h2 id="mysql扩展"><a href="#mysql扩展" class="header-anchor">#</a> mysql扩展</h2> <ol><li>垂直扩展(新增设备)</li> <li>水平扩展(单设备新增库表)</li></ol> <p>数据分片,这个不好控制,如非必要尽量不要分片,如有分片需求,
+尽量做到冷热数据维度去分片</p> <p>负载均衡
+在mysql前加一个代理或者在客户端做多数据源管理</p> <h2 id="高可用"><a href="#高可用" class="header-anchor">#</a> 高可用</h2> <p>故障恢复
+故障隔离
+故障自动切换
+数据备份</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/to-be-bast/db/mysql.html" class="prev">
+        mysql
+      </a></span> <span class="next"><a href="/to-be-bast/db/mongodb.html">
+        mongodb
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/to-be-bast/assets/js/app.c3e67182.js" defer></script><script src="/to-be-bast/assets/js/2.a97ad3d5.js" defer></script><script src="/to-be-bast/assets/js/46.885b14aa.js" defer></script>
+  </body>
+</html>

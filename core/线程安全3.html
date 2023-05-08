@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>synchronized</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/to-be-bast/favicon.ico">
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?928c7c5c1127ed68793a835c728ec9be";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+        </script>
+    <meta name="description" content="zwx-haha个人技术文档">
+    
+    <link rel="preload" href="/to-be-bast/assets/css/0.styles.be698e14.css" as="style"><link rel="preload" href="/to-be-bast/assets/js/app.c3e67182.js" as="script"><link rel="preload" href="/to-be-bast/assets/js/2.a97ad3d5.js" as="script"><link rel="preload" href="/to-be-bast/assets/js/36.2acc3458.js" as="script"><link rel="prefetch" href="/to-be-bast/assets/js/10.c5262efb.js"><link rel="prefetch" href="/to-be-bast/assets/js/11.c59ed9e2.js"><link rel="prefetch" href="/to-be-bast/assets/js/12.9f0a73c1.js"><link rel="prefetch" href="/to-be-bast/assets/js/13.17a058af.js"><link rel="prefetch" href="/to-be-bast/assets/js/14.db6b1266.js"><link rel="prefetch" href="/to-be-bast/assets/js/15.21e0cede.js"><link rel="prefetch" href="/to-be-bast/assets/js/16.430911cf.js"><link rel="prefetch" href="/to-be-bast/assets/js/17.658f2682.js"><link rel="prefetch" href="/to-be-bast/assets/js/18.bcaa61e8.js"><link rel="prefetch" href="/to-be-bast/assets/js/19.76f74703.js"><link rel="prefetch" href="/to-be-bast/assets/js/20.b2ef81e3.js"><link rel="prefetch" href="/to-be-bast/assets/js/21.3539e5c6.js"><link rel="prefetch" href="/to-be-bast/assets/js/22.45f1fd04.js"><link rel="prefetch" href="/to-be-bast/assets/js/23.f7057a81.js"><link rel="prefetch" href="/to-be-bast/assets/js/24.871f1c42.js"><link rel="prefetch" href="/to-be-bast/assets/js/25.9dbd80cb.js"><link rel="prefetch" href="/to-be-bast/assets/js/26.813bd17d.js"><link rel="prefetch" href="/to-be-bast/assets/js/27.77edb239.js"><link rel="prefetch" href="/to-be-bast/assets/js/28.3217d365.js"><link rel="prefetch" href="/to-be-bast/assets/js/29.2969c686.js"><link rel="prefetch" href="/to-be-bast/assets/js/3.0d77f0c3.js"><link rel="prefetch" href="/to-be-bast/assets/js/30.c1e77f7b.js"><link rel="prefetch" href="/to-be-bast/assets/js/31.a2723f65.js"><link rel="prefetch" href="/to-be-bast/assets/js/32.51203b3b.js"><link rel="prefetch" href="/to-be-bast/assets/js/33.39ad8118.js"><link rel="prefetch" href="/to-be-bast/assets/js/34.5ee668ce.js"><link rel="prefetch" href="/to-be-bast/assets/js/35.8b547770.js"><link rel="prefetch" href="/to-be-bast/assets/js/37.077c6e56.js"><link rel="prefetch" href="/to-be-bast/assets/js/38.11563a61.js"><link rel="prefetch" href="/to-be-bast/assets/js/39.07d7a301.js"><link rel="prefetch" href="/to-be-bast/assets/js/4.d12742be.js"><link rel="prefetch" href="/to-be-bast/assets/js/40.30a9124a.js"><link rel="prefetch" href="/to-be-bast/assets/js/41.a2876b17.js"><link rel="prefetch" href="/to-be-bast/assets/js/42.67ec8031.js"><link rel="prefetch" href="/to-be-bast/assets/js/43.000c7c57.js"><link rel="prefetch" href="/to-be-bast/assets/js/44.ebcefafd.js"><link rel="prefetch" href="/to-be-bast/assets/js/45.c0542bf1.js"><link rel="prefetch" href="/to-be-bast/assets/js/46.885b14aa.js"><link rel="prefetch" href="/to-be-bast/assets/js/47.bad3ee03.js"><link rel="prefetch" href="/to-be-bast/assets/js/48.5cae63f1.js"><link rel="prefetch" href="/to-be-bast/assets/js/49.f7f0e9bd.js"><link rel="prefetch" href="/to-be-bast/assets/js/5.216cae74.js"><link rel="prefetch" href="/to-be-bast/assets/js/50.0f8dfcf4.js"><link rel="prefetch" href="/to-be-bast/assets/js/51.2c964dc0.js"><link rel="prefetch" href="/to-be-bast/assets/js/52.e12923d4.js"><link rel="prefetch" href="/to-be-bast/assets/js/53.8e58b6aa.js"><link rel="prefetch" href="/to-be-bast/assets/js/54.9c0c208f.js"><link rel="prefetch" href="/to-be-bast/assets/js/55.0d700812.js"><link rel="prefetch" href="/to-be-bast/assets/js/56.3c84f5d6.js"><link rel="prefetch" href="/to-be-bast/assets/js/57.3813517d.js"><link rel="prefetch" href="/to-be-bast/assets/js/58.d2454e98.js"><link rel="prefetch" href="/to-be-bast/assets/js/59.00a0b442.js"><link rel="prefetch" href="/to-be-bast/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/to-be-bast/assets/js/60.dc71c357.js"><link rel="prefetch" href="/to-be-bast/assets/js/61.243b7158.js"><link rel="prefetch" href="/to-be-bast/assets/js/62.ed7cb8b4.js"><link rel="prefetch" href="/to-be-bast/assets/js/63.e40f2c54.js"><link rel="prefetch" href="/to-be-bast/assets/js/64.84f845fd.js"><link rel="prefetch" href="/to-be-bast/assets/js/65.0cea4cc9.js"><link rel="prefetch" href="/to-be-bast/assets/js/66.2d776da3.js"><link rel="prefetch" href="/to-be-bast/assets/js/67.eeaa7ab3.js"><link rel="prefetch" href="/to-be-bast/assets/js/68.bb2e319b.js"><link rel="prefetch" href="/to-be-bast/assets/js/69.5363dc47.js"><link rel="prefetch" href="/to-be-bast/assets/js/7.2f0859e3.js"><link rel="prefetch" href="/to-be-bast/assets/js/70.f5829a44.js"><link rel="prefetch" href="/to-be-bast/assets/js/71.3226e5b5.js"><link rel="prefetch" href="/to-be-bast/assets/js/72.4bc7c7a3.js"><link rel="prefetch" href="/to-be-bast/assets/js/73.4f01d8fc.js"><link rel="prefetch" href="/to-be-bast/assets/js/74.455ffd32.js"><link rel="prefetch" href="/to-be-bast/assets/js/75.adbb6e85.js"><link rel="prefetch" href="/to-be-bast/assets/js/76.8aeea110.js"><link rel="prefetch" href="/to-be-bast/assets/js/77.f4e5bcff.js"><link rel="prefetch" href="/to-be-bast/assets/js/78.0eb64265.js"><link rel="prefetch" href="/to-be-bast/assets/js/79.2155f6c9.js"><link rel="prefetch" href="/to-be-bast/assets/js/8.28816398.js"><link rel="prefetch" href="/to-be-bast/assets/js/9.c31128b6.js">
+    <link rel="stylesheet" href="/to-be-bast/assets/css/0.styles.be698e14.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/to-be-bast/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/to-be-bast/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="你皮05的 Java 博客" class="dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="你皮05的 Java 博客" class="mobile-dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/haha-zwx-ooo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/to-be-bast/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="你皮05的 Java 博客" class="dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="你皮05的 Java 博客" class="mobile-dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/haha-zwx-ooo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/to-be-bast/" aria-current="page" class="sidebar-link">职业技能</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/basic/Java数据类型" class="sidebar-heading clickable"><span>Java基础知识</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/core/多线程一" class="sidebar-heading clickable open"><span>Java核心技术</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/to-be-bast/core/多线程一.html" class="sidebar-link">多线程概念</a></li><li><a href="/to-be-bast/core/多线程二.html" class="sidebar-link">多线程使用</a></li><li><a href="/to-be-bast/core/多线程三.html" class="sidebar-link">线程返回值和异常</a></li><li><a href="/to-be-bast/core/多线程四.html" class="sidebar-link">线程池</a></li><li><a href="/to-be-bast/core/多线程五.html" class="sidebar-link">自定义线程池</a></li><li><a href="/to-be-bast/core/多线程六.html" class="sidebar-link">线程池使用案例</a></li><li><a href="/to-be-bast/core/多线程七.html" class="sidebar-link">上下文传递</a></li><li><a href="/to-be-bast/core/线程安全1.html" class="sidebar-link">线程安全</a></li><li><a href="/to-be-bast/core/线程安全2.html" class="sidebar-link">volatile</a></li><li><a href="/to-be-bast/core/线程安全3.html" class="active sidebar-link">synchronized</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/to-be-bast/core/线程安全3.html#对象内置锁" class="sidebar-link">对象内置锁</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/core/线程安全3.html#锁升级" class="sidebar-link">锁升级</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/core/线程安全3.html#案例" class="sidebar-link">案例</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/core/线程安全3.html#锁消除" class="sidebar-link">锁消除</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/core/线程安全3.html#锁粗化" class="sidebar-link">锁粗化</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/core/线程安全3.html#自旋锁" class="sidebar-link">自旋锁</a></li></ul></li><li><a href="/to-be-bast/core/线程安全4.html" class="sidebar-link">ReentrantLock</a></li><li><a href="/to-be-bast/core/线程安全5.html" class="sidebar-link">AQS</a></li><li><a href="/to-be-bast/core/线程安全6.html" class="sidebar-link">读写锁</a></li><li><a href="/to-be-bast/core/线程安全7.html" class="sidebar-link">写时复制(Copy-On-Write)</a></li><li><a href="/to-be-bast/core/集合框架.html" class="sidebar-link">集合</a></li><li><a href="/to-be-bast/core/IO流.html" class="sidebar-link">IO</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/web/servlet" class="sidebar-heading clickable"><span>JavaWeb</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/db/db" class="sidebar-heading clickable"><span>数据库</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/designpattern/designpattern" class="sidebar-heading clickable"><span>设计模式</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/frame/frame" class="sidebar-heading clickable"><span>框架和工具</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/cache/cache" class="sidebar-heading clickable"><span>缓存</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/mq/mq" class="sidebar-heading clickable"><span>消息队列</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/lock/lock" class="sidebar-heading clickable"><span>分布式锁</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/tr/tr" class="sidebar-heading clickable"><span>分布式事务</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="synchronized"><a href="#synchronized" class="header-anchor">#</a> synchronized</h1> <p>synchronized 是 Java 中的一种同步机制，可以保证多线程环境下对共享资源的安全访问。在 Java
+中，每个对象都有一个内置锁（也称为监视器锁或互斥锁），同一时间只有一个线程能够获得该锁，其他线程必须等待锁的释放。这种机制被称为对象的锁或者实例锁。</p> <p>synchronized 可以用在方法上或者代码块上。当用在方法上时，锁住的是调用该方法的对象。当用在代码块上时，锁住的是 synchronized
+括号里的对象。</p> <p>synchronized 的特点有以下几点：</p> <p>保证同一时间只有一个线程可以执行被锁定的代码块，从而保证共享资源的安全访问。
+synchronized 会使执行代码的线程阻塞，如果有其他线程持有锁，必须等待其释放后才能继续执行。
+可以保证多线程间的可见性，即一个线程修改了变量的值，其他线程可以立即看到该值的变化。
+需要注意的是，如果同步代码块中的代码执行时间过长，会影响程序的性能，因为其他需要等待锁的线程会一直被阻塞。此外，如果在使用
+synchronized 时没有注意到锁的粒度，可能会导致死锁等问题。</p> <h2 id="对象内置锁"><a href="#对象内置锁" class="header-anchor">#</a> 对象内置锁</h2> <ol><li>Java对象的结构</li></ol> <p><img src="/to-be-bast/images/java%E5%AF%B9%E8%B1%A1%E7%BB%93%E6%9E%84.png" alt="java对象结构"></p> <p>一个Java对象可以分为三个部分：</p> <ol><li>对象头
+对象头又包含三个字段：第一个是Mark Word，用来存储对象的GC信息，锁信息，hashcode值等。第二个是Class
+Pointer，存放的是类指针，虚拟机通过这个类指针这个对象是哪个类的实例。第三个是Array
+Length，是一个可选字段，当此对象为数组时才会存在，用于记录数组长度的数据。</li></ol> <p>
+2. 对象体
+   这部分包含对象的实例变量，包含父类的属性，这部分按照4字节对齐。
+</p><p>
+3. 对齐字节
+   也叫填充区，其作用是保证这个对象占用的内存字节数为8的整数倍，因为对象头是8位的，所以仅需保证对象体也是8的倍数即可，当对象的实例变量数据不为8的倍数时，便需要填充来保证8字节的对齐。
+</p><p>Mark Word、Class Pointer、Array Length等字段的长度都与JVM的位数有关。Mark Word的长度为JVM的一个Word（字）大小，也就是说32位JVM的Mark
+Word为32位，64位JVM的Mark Word为64位。Class Pointer（类对象指针）字段的长度也为JVM的一个Word（字）大小，即32位JVM的Mark
+Word为32位，64位JVM的Mark Word为64位。所以，在32位JVM虚拟机中，Mark Word和Class Pointer这两部分都是32位的；在64位JVM虚拟机中，Mark
+Word和ClassPointer这两部分都是64位的。</p> <p><img src="/to-be-bast/images/java%E5%AF%B9%E8%B1%A1%E9%94%81markword.png" alt="java对象锁markword"></p> <h2 id="锁升级"><a href="#锁升级" class="header-anchor">#</a> 锁升级</h2> <ol><li><p>无锁 --&gt; 偏向锁：
+当一个线程进入同步代码块时，发现此对象没有线程占用，那么这个对象就使用CAS（null,
+threadID）null是期望的值，threadID是将要写入的值，将自己的线程ID写入对象的Mark
+Word中，如果写入成功，即对象中没有threadID，则对象由原来的无锁状态变为偏向锁状态，lock不变化，为01，将偏向锁的标志位biased发生变化，由0变为1。</p></li> <li><p>偏向锁 --&gt; 轻量级锁：
+当一个线程进入同步代码块时，使用CAS（null, threadID）将自己的线程ID写入对象的Mark
+Word中，如果写入失败，则说明此时线程已经被占用，则撤销对象的偏向锁定状态，升级为轻量级锁。同时该线程自旋来持续获取锁,对象Mark
+Word中的lock位由01变为00；</p></li> <li><p>轻量级锁 --&gt; 重量级锁：
+轻量级锁的本意是为了减少多线程进入操作系统底层的互斥锁（Mutex
+Lock）的概率，并不是要替代操作系统互斥锁。所以，在争用激烈的场景下，轻量级锁会膨胀为基于操作系统内核互斥锁实现的重量级锁。</p></li></ol> <h2 id="案例"><a href="#案例" class="header-anchor">#</a> 案例</h2> <p>通过一个小工具来查看下类在内存中的对象布局</p> <div class="language-xml extra-class"><pre class="language-xml"><code>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.openjdk.jol<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>jol-core<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>0.10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>compile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SyncDemo</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">T</span> t <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">T</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//无锁状态 lock 值 应该是 01</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;***无锁01***&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">ClassLayout</span><span class="token punctuation">.</span><span class="token function">parseInstance</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toPrintable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;***无锁01***&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//此时应该是 偏向锁状态 lock 值是 01 应该有threadId</span>
+            <span class="token comment">//因为偏向锁是有4秒的延迟的，所以如果想要看到效果可以在代码里加上sleep(4100)就可以了。或者是通过jvm参数-XX:BiasedLockingStartupDelay=0将延迟设置成0</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;***偏向锁01***&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">ClassLayout</span><span class="token punctuation">.</span><span class="token function">parseInstance</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toPrintable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;***偏向锁01***&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span><span class="token constant">MILLISECONDS</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token class-name">Thread</span> t1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//此时应该是 轻量级状态 lock 值是 00</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;***轻量级锁00***&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">ClassLayout</span><span class="token punctuation">.</span><span class="token function">parseInstance</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toPrintable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;***轻量级锁00***&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                    <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span><span class="token constant">SECONDS</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        t1<span class="token punctuation">.</span><span class="token function">setPriority</span><span class="token punctuation">(</span><span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token constant">MAX_PRIORITY</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        t1<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token class-name">Thread</span> t2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//此时应该是 重量级状态 lock 值是 10</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;***重量级锁10***&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">ClassLayout</span><span class="token punctuation">.</span><span class="token function">parseInstance</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toPrintable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;***重量级锁10***&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        t2<span class="token punctuation">.</span><span class="token function">setPriority</span><span class="token punctuation">(</span><span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token constant">MIN_PRIORITY</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span><span class="token constant">SECONDS</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        t2<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token annotation punctuation">@Data</span>
+<span class="token keyword">class</span> <span class="token class-name">T</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>执行结果</p> <div class="language-text extra-class"><pre class="language-text"><code>***无锁01***
+com.haha.threadsafe.T object internals:
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)
+      4     4        (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+      8     4        (object header)                           43 c1 00 f8 (01000011 11000001 00000000 11111000) (-134168253)
+     12     4    int T.age                                     0
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+***无锁01***
+***偏向锁01***
+com.haha.threadsafe.T object internals:
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           05 00 cc 48 (00000101 00000000 11001100 01001000) (1221328901)
+      4     4        (object header)                           f7 01 00 00 (11110111 00000001 00000000 00000000) (503)
+      8     4        (object header)                           43 c1 00 f8 (01000011 11000001 00000000 11111000) (-134168253)
+     12     4    int T.age                                     0
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+***偏向锁01***
+***轻量级锁00***
+com.haha.threadsafe.T object internals:
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           98 f4 9f e4 (10011000 11110100 10011111 11100100) (-459279208)
+      4     4        (object header)                           c3 00 00 00 (11000011 00000000 00000000 00000000) (195)
+      8     4        (object header)                           43 c1 00 f8 (01000011 11000001 00000000 11111000) (-134168253)
+     12     4    int T.age                                     0
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+***轻量级锁00***
+***重量级锁10***
+com.haha.threadsafe.T object internals:
+ OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
+      0     4        (object header)                           ca 6a d4 48 (11001010 01101010 11010100 01001000) (1221880522)
+      4     4        (object header)                           f7 01 00 00 (11110111 00000001 00000000 00000000) (503)
+      8     4        (object header)                           43 c1 00 f8 (01000011 11000001 00000000 11111000) (-134168253)
+     12     4    int T.age                                     0
+Instance size: 16 bytes
+Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+***重量级锁10***
+</code></pre></div><p>锁升级
+000001<strong>01</strong>  -&gt; 000001<strong>01</strong>  -&gt; 100110<strong>00</strong> -&gt; 110010<strong>10</strong></p> <h2 id="锁消除"><a href="#锁消除" class="header-anchor">#</a> 锁消除</h2> <ul><li>什么是锁消除</li></ul> <p>锁消除是指在JVM在JIT即时编译时优化代码的一种方式，主要是将不需要同步的代码从同步代码块中移除，提升执行效率。</p> <ul><li>锁消除原理</li></ul> <p>锁消除可以实现的原理是基于JIT编译的优化方式之一—逃逸分析，当代码没有发生逃逸，会将该变量分配在栈上，那么该对象没有逃逸到线程之外，则该对象就是线程私有的，不会出现多线程的数据一致性和安全性问题，则该这样的代码就会被移除到同步代码块之外，无需进行同步。</p> <h2 id="锁粗化"><a href="#锁粗化" class="header-anchor">#</a> 锁粗化</h2> <ul><li>什么是锁粗化</li></ul> <p>和锁消除相反，锁消除是将同步代码块的作用域变小，而锁粗化的目的是将锁的同步代码块的作用域变大，当然，同步代码块的作用域变大也是为了提高程序的执行效率。例如下面的代码：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">sychronized</span><span class="token punctuation">(</span><span class="token class-name">Test</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><p>优化后</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">sychronized</span><span class="token punctuation">(</span><span class="token class-name">Test</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h2 id="自旋锁"><a href="#自旋锁" class="header-anchor">#</a> 自旋锁</h2> <p>是指当一个线程在获取锁的时候，如果锁已经被其它线程获取，那么该线程将循环等待，然后不断的判断锁是否能够被成功获取，直到获取到锁才会退出循环。</p> <div class="language-text extra-class"><pre class="language-text"><code>自旋锁的默认自选次数是10次，可以通过JVM参数-XX:PreBlockSpin进行修改
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/to-be-bast/core/线程安全2.html" class="prev">
+        volatile
+      </a></span> <span class="next"><a href="/to-be-bast/core/线程安全4.html">
+        ReentrantLock
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/to-be-bast/assets/js/app.c3e67182.js" defer></script><script src="/to-be-bast/assets/js/2.a97ad3d5.js" defer></script><script src="/to-be-bast/assets/js/36.2acc3458.js" defer></script>
+  </body>
+</html>

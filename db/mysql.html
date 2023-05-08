@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>mysql</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/to-be-bast/favicon.ico">
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?928c7c5c1127ed68793a835c728ec9be";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+        </script>
+    <meta name="description" content="zwx-haha个人技术文档">
+    
+    <link rel="preload" href="/to-be-bast/assets/css/0.styles.be698e14.css" as="style"><link rel="preload" href="/to-be-bast/assets/js/app.c3e67182.js" as="script"><link rel="preload" href="/to-be-bast/assets/js/2.a97ad3d5.js" as="script"><link rel="preload" href="/to-be-bast/assets/js/45.c0542bf1.js" as="script"><link rel="prefetch" href="/to-be-bast/assets/js/10.c5262efb.js"><link rel="prefetch" href="/to-be-bast/assets/js/11.c59ed9e2.js"><link rel="prefetch" href="/to-be-bast/assets/js/12.9f0a73c1.js"><link rel="prefetch" href="/to-be-bast/assets/js/13.17a058af.js"><link rel="prefetch" href="/to-be-bast/assets/js/14.db6b1266.js"><link rel="prefetch" href="/to-be-bast/assets/js/15.21e0cede.js"><link rel="prefetch" href="/to-be-bast/assets/js/16.430911cf.js"><link rel="prefetch" href="/to-be-bast/assets/js/17.658f2682.js"><link rel="prefetch" href="/to-be-bast/assets/js/18.bcaa61e8.js"><link rel="prefetch" href="/to-be-bast/assets/js/19.76f74703.js"><link rel="prefetch" href="/to-be-bast/assets/js/20.b2ef81e3.js"><link rel="prefetch" href="/to-be-bast/assets/js/21.3539e5c6.js"><link rel="prefetch" href="/to-be-bast/assets/js/22.45f1fd04.js"><link rel="prefetch" href="/to-be-bast/assets/js/23.f7057a81.js"><link rel="prefetch" href="/to-be-bast/assets/js/24.871f1c42.js"><link rel="prefetch" href="/to-be-bast/assets/js/25.9dbd80cb.js"><link rel="prefetch" href="/to-be-bast/assets/js/26.813bd17d.js"><link rel="prefetch" href="/to-be-bast/assets/js/27.77edb239.js"><link rel="prefetch" href="/to-be-bast/assets/js/28.3217d365.js"><link rel="prefetch" href="/to-be-bast/assets/js/29.2969c686.js"><link rel="prefetch" href="/to-be-bast/assets/js/3.0d77f0c3.js"><link rel="prefetch" href="/to-be-bast/assets/js/30.c1e77f7b.js"><link rel="prefetch" href="/to-be-bast/assets/js/31.a2723f65.js"><link rel="prefetch" href="/to-be-bast/assets/js/32.51203b3b.js"><link rel="prefetch" href="/to-be-bast/assets/js/33.39ad8118.js"><link rel="prefetch" href="/to-be-bast/assets/js/34.5ee668ce.js"><link rel="prefetch" href="/to-be-bast/assets/js/35.8b547770.js"><link rel="prefetch" href="/to-be-bast/assets/js/36.2acc3458.js"><link rel="prefetch" href="/to-be-bast/assets/js/37.077c6e56.js"><link rel="prefetch" href="/to-be-bast/assets/js/38.11563a61.js"><link rel="prefetch" href="/to-be-bast/assets/js/39.07d7a301.js"><link rel="prefetch" href="/to-be-bast/assets/js/4.d12742be.js"><link rel="prefetch" href="/to-be-bast/assets/js/40.30a9124a.js"><link rel="prefetch" href="/to-be-bast/assets/js/41.a2876b17.js"><link rel="prefetch" href="/to-be-bast/assets/js/42.67ec8031.js"><link rel="prefetch" href="/to-be-bast/assets/js/43.000c7c57.js"><link rel="prefetch" href="/to-be-bast/assets/js/44.ebcefafd.js"><link rel="prefetch" href="/to-be-bast/assets/js/46.885b14aa.js"><link rel="prefetch" href="/to-be-bast/assets/js/47.bad3ee03.js"><link rel="prefetch" href="/to-be-bast/assets/js/48.5cae63f1.js"><link rel="prefetch" href="/to-be-bast/assets/js/49.f7f0e9bd.js"><link rel="prefetch" href="/to-be-bast/assets/js/5.216cae74.js"><link rel="prefetch" href="/to-be-bast/assets/js/50.0f8dfcf4.js"><link rel="prefetch" href="/to-be-bast/assets/js/51.2c964dc0.js"><link rel="prefetch" href="/to-be-bast/assets/js/52.e12923d4.js"><link rel="prefetch" href="/to-be-bast/assets/js/53.8e58b6aa.js"><link rel="prefetch" href="/to-be-bast/assets/js/54.9c0c208f.js"><link rel="prefetch" href="/to-be-bast/assets/js/55.0d700812.js"><link rel="prefetch" href="/to-be-bast/assets/js/56.3c84f5d6.js"><link rel="prefetch" href="/to-be-bast/assets/js/57.3813517d.js"><link rel="prefetch" href="/to-be-bast/assets/js/58.d2454e98.js"><link rel="prefetch" href="/to-be-bast/assets/js/59.00a0b442.js"><link rel="prefetch" href="/to-be-bast/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/to-be-bast/assets/js/60.dc71c357.js"><link rel="prefetch" href="/to-be-bast/assets/js/61.243b7158.js"><link rel="prefetch" href="/to-be-bast/assets/js/62.ed7cb8b4.js"><link rel="prefetch" href="/to-be-bast/assets/js/63.e40f2c54.js"><link rel="prefetch" href="/to-be-bast/assets/js/64.84f845fd.js"><link rel="prefetch" href="/to-be-bast/assets/js/65.0cea4cc9.js"><link rel="prefetch" href="/to-be-bast/assets/js/66.2d776da3.js"><link rel="prefetch" href="/to-be-bast/assets/js/67.eeaa7ab3.js"><link rel="prefetch" href="/to-be-bast/assets/js/68.bb2e319b.js"><link rel="prefetch" href="/to-be-bast/assets/js/69.5363dc47.js"><link rel="prefetch" href="/to-be-bast/assets/js/7.2f0859e3.js"><link rel="prefetch" href="/to-be-bast/assets/js/70.f5829a44.js"><link rel="prefetch" href="/to-be-bast/assets/js/71.3226e5b5.js"><link rel="prefetch" href="/to-be-bast/assets/js/72.4bc7c7a3.js"><link rel="prefetch" href="/to-be-bast/assets/js/73.4f01d8fc.js"><link rel="prefetch" href="/to-be-bast/assets/js/74.455ffd32.js"><link rel="prefetch" href="/to-be-bast/assets/js/75.adbb6e85.js"><link rel="prefetch" href="/to-be-bast/assets/js/76.8aeea110.js"><link rel="prefetch" href="/to-be-bast/assets/js/77.f4e5bcff.js"><link rel="prefetch" href="/to-be-bast/assets/js/78.0eb64265.js"><link rel="prefetch" href="/to-be-bast/assets/js/79.2155f6c9.js"><link rel="prefetch" href="/to-be-bast/assets/js/8.28816398.js"><link rel="prefetch" href="/to-be-bast/assets/js/9.c31128b6.js">
+    <link rel="stylesheet" href="/to-be-bast/assets/css/0.styles.be698e14.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/to-be-bast/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/to-be-bast/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="你皮05的 Java 博客" class="dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="你皮05的 Java 博客" class="mobile-dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/haha-zwx-ooo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/to-be-bast/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="你皮05的 Java 博客" class="dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="你皮05的 Java 博客" class="mobile-dropdown-title"><span class="title">你皮05的 Java 博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/haha-zwx-ooo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/to-be-bast/" aria-current="page" class="sidebar-link">职业技能</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/basic/Java数据类型" class="sidebar-heading clickable"><span>Java基础知识</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/core/多线程一" class="sidebar-heading clickable"><span>Java核心技术</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/web/servlet" class="sidebar-heading clickable"><span>JavaWeb</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/db/db" class="sidebar-heading clickable open"><span>数据库</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/to-be-bast/db/mysql.html" aria-current="page" class="active sidebar-link">mysql</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#sql语句" class="sidebar-link">sql语句</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#order-by-排序语句" class="sidebar-link">order by 排序语句</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#where-条件过滤" class="sidebar-link">where 条件过滤</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#函数" class="sidebar-link">函数</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#分组" class="sidebar-link">分组</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#连接和子查询" class="sidebar-link">连接和子查询</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#insert" class="sidebar-link">insert</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#update" class="sidebar-link">update</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#delete" class="sidebar-link">delete</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#存储过程" class="sidebar-link">存储过程</a></li><li class="sidebar-sub-header"><a href="/to-be-bast/db/mysql.html#事务" class="sidebar-link">事务</a></li></ul></li><li><a href="/to-be-bast/db/mysql2.html" class="sidebar-link">高性能mysql</a></li><li><a href="/to-be-bast/db/mongodb.html" class="sidebar-link">mongodb</a></li><li><a href="/to-be-bast/db/es.html" class="sidebar-link">es</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/designpattern/designpattern" class="sidebar-heading clickable"><span>设计模式</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/frame/frame" class="sidebar-heading clickable"><span>框架和工具</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/cache/cache" class="sidebar-heading clickable"><span>缓存</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/mq/mq" class="sidebar-heading clickable"><span>消息队列</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/lock/lock" class="sidebar-heading clickable"><span>分布式锁</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/to-be-bast/tr/tr" class="sidebar-heading clickable"><span>分布式事务</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql"><a href="#mysql" class="header-anchor">#</a> mysql</h1> <p>RDBMS 即关系数据库管理系统(Relational Database Management System)的特点：</p> <ol><li>数据以表格的形式出现</li> <li>每行为各种记录名称</li> <li>每列为记录名称所对应的数据域</li> <li>许多的行和列组成一张表单</li> <li>若干的表单组成database</li></ol> <p>MySQL 为关系型数据库(Relational Database Management System), 这种所谓的&quot;关系型&quot;可以理解为&quot;表格&quot;的概念,
+一个关系型数据库由一个或数个表格组成.</p> <p>对应关系是  :
+数据库(database) -&gt;  表(table) -&gt; row(行)|column(列)  -&gt; 数据类型 索引</p> <p>下面具体来熟悉sql操作,依赖一些基础表和数据,建表sql 和 初始化数据sql如下</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">########################################</span>
+<span class="token comment"># 建表sql</span>
+<span class="token comment">########################################</span>
+
+
+<span class="token comment">########################</span>
+<span class="token comment"># Create customers table</span>
+<span class="token comment">########################</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> customers
+<span class="token punctuation">(</span>
+    cust_id      <span class="token keyword">int</span>       <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token punctuation">,</span>
+    cust_name    <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span>  <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    cust_address <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span>  <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    cust_city    <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span>  <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    cust_state   <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>   <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    cust_zip     <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>  <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    cust_country <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span>  <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    cust_contact <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span>  <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    cust_email   <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>cust_id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span> <span class="token operator">=</span> <span class="token keyword">InnoDB</span><span class="token punctuation">;</span>
+
+<span class="token comment">#########################</span>
+<span class="token comment"># Create orderitems table</span>
+<span class="token comment">#########################</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> orderitems
+<span class="token punctuation">(</span>
+    order_num  <span class="token keyword">int</span>           <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    order_item <span class="token keyword">int</span>           <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    prod_id    <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>      <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    quantity   <span class="token keyword">int</span>           <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    item_price <span class="token keyword">decimal</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span> <span class="token operator">=</span> <span class="token keyword">InnoDB</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">#####################</span>
+<span class="token comment"># Create orders table</span>
+<span class="token comment">#####################</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> orders
+<span class="token punctuation">(</span>
+    order_num  <span class="token keyword">int</span>      <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token punctuation">,</span>
+    order_date <span class="token keyword">datetime</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    cust_id    <span class="token keyword">int</span>      <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>order_num<span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span> <span class="token operator">=</span> <span class="token keyword">InnoDB</span><span class="token punctuation">;</span>
+
+<span class="token comment">#######################</span>
+<span class="token comment"># Create products table</span>
+<span class="token comment">#######################</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> products
+<span class="token punctuation">(</span>
+    prod_id    <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>      <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    vend_id    <span class="token keyword">int</span>           <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    prod_name  <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span>     <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    prod_price <span class="token keyword">decimal</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    prod_desc  <span class="token keyword">text</span>          <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>prod_id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span> <span class="token operator">=</span> <span class="token keyword">InnoDB</span><span class="token punctuation">;</span>
+
+<span class="token comment">######################</span>
+<span class="token comment"># Create vendors table</span>
+<span class="token comment">######################</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> vendors
+<span class="token punctuation">(</span>
+    vend_id      <span class="token keyword">int</span>      <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token punctuation">,</span>
+    vend_name    <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    vend_address <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    vend_city    <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    vend_state   <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>  <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    vend_zip     <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    vend_country <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>vend_id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span> <span class="token operator">=</span> <span class="token keyword">InnoDB</span><span class="token punctuation">;</span>
+
+<span class="token comment">###########################</span>
+<span class="token comment"># Create productnotes table</span>
+<span class="token comment">###########################</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> productnotes
+<span class="token punctuation">(</span>
+    note_id   <span class="token keyword">int</span>      <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">AUTO_INCREMENT</span><span class="token punctuation">,</span>
+    prod_id   <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    note_date <span class="token keyword">datetime</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    note_text <span class="token keyword">text</span>     <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>note_id<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    FULLTEXT <span class="token punctuation">(</span>note_text<span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span> <span class="token operator">=</span> MyISAM<span class="token punctuation">;</span>
+
+
+<span class="token comment">#####################</span>
+<span class="token comment"># Define foreign keys</span>
+<span class="token comment">#####################</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> orderitems
+    <span class="token keyword">ADD</span> <span class="token keyword">CONSTRAINT</span> fk_orderitems_orders <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>order_num<span class="token punctuation">)</span> <span class="token keyword">REFERENCES</span> orders <span class="token punctuation">(</span>order_num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> orderitems
+    <span class="token keyword">ADD</span> <span class="token keyword">CONSTRAINT</span> fk_orderitems_products <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>prod_id<span class="token punctuation">)</span> <span class="token keyword">REFERENCES</span> products <span class="token punctuation">(</span>prod_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> orders
+    <span class="token keyword">ADD</span> <span class="token keyword">CONSTRAINT</span> fk_orders_customers <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>cust_id<span class="token punctuation">)</span> <span class="token keyword">REFERENCES</span> customers <span class="token punctuation">(</span>cust_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> products
+    <span class="token keyword">ADD</span> <span class="token keyword">CONSTRAINT</span> fk_products_vendors <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>vend_id<span class="token punctuation">)</span> <span class="token keyword">REFERENCES</span> vendors <span class="token punctuation">(</span>vend_id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">########################################</span>
+<span class="token comment"># 初始化数据sql</span>
+<span class="token comment">########################################</span>
+
+
+<span class="token comment">##########################</span>
+<span class="token comment"># Populate customers table</span>
+<span class="token comment">##########################</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> customers<span class="token punctuation">(</span>cust_id<span class="token punctuation">,</span> cust_name<span class="token punctuation">,</span> cust_address<span class="token punctuation">,</span> cust_city<span class="token punctuation">,</span> cust_state<span class="token punctuation">,</span> cust_zip<span class="token punctuation">,</span> cust_country<span class="token punctuation">,</span> cust_contact<span class="token punctuation">,</span>
+                      cust_email<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">10001</span><span class="token punctuation">,</span> <span class="token string">'Coyote Inc.'</span><span class="token punctuation">,</span> <span class="token string">'200 Maple Lane'</span><span class="token punctuation">,</span> <span class="token string">'Detroit'</span><span class="token punctuation">,</span> <span class="token string">'MI'</span><span class="token punctuation">,</span> <span class="token string">'44444'</span><span class="token punctuation">,</span> <span class="token string">'USA'</span><span class="token punctuation">,</span> <span class="token string">'Y Lee'</span><span class="token punctuation">,</span> <span class="token string">'ylee@coyote.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> customers<span class="token punctuation">(</span>cust_id<span class="token punctuation">,</span> cust_name<span class="token punctuation">,</span> cust_address<span class="token punctuation">,</span> cust_city<span class="token punctuation">,</span> cust_state<span class="token punctuation">,</span> cust_zip<span class="token punctuation">,</span> cust_country<span class="token punctuation">,</span> cust_contact<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">10002</span><span class="token punctuation">,</span> <span class="token string">'Mouse House'</span><span class="token punctuation">,</span> <span class="token string">'333 Fromage Lane'</span><span class="token punctuation">,</span> <span class="token string">'Columbus'</span><span class="token punctuation">,</span> <span class="token string">'OH'</span><span class="token punctuation">,</span> <span class="token string">'43333'</span><span class="token punctuation">,</span> <span class="token string">'USA'</span><span class="token punctuation">,</span> <span class="token string">'Jerry Mouse'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> customers<span class="token punctuation">(</span>cust_id<span class="token punctuation">,</span> cust_name<span class="token punctuation">,</span> cust_address<span class="token punctuation">,</span> cust_city<span class="token punctuation">,</span> cust_state<span class="token punctuation">,</span> cust_zip<span class="token punctuation">,</span> cust_country<span class="token punctuation">,</span> cust_contact<span class="token punctuation">,</span>
+                      cust_email<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">10003</span><span class="token punctuation">,</span> <span class="token string">'Wascals'</span><span class="token punctuation">,</span> <span class="token string">'1 Sunny Place'</span><span class="token punctuation">,</span> <span class="token string">'Muncie'</span><span class="token punctuation">,</span> <span class="token string">'IN'</span><span class="token punctuation">,</span> <span class="token string">'42222'</span><span class="token punctuation">,</span> <span class="token string">'USA'</span><span class="token punctuation">,</span> <span class="token string">'Jim Jones'</span><span class="token punctuation">,</span> <span class="token string">'rabbit@wascally.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> customers<span class="token punctuation">(</span>cust_id<span class="token punctuation">,</span> cust_name<span class="token punctuation">,</span> cust_address<span class="token punctuation">,</span> cust_city<span class="token punctuation">,</span> cust_state<span class="token punctuation">,</span> cust_zip<span class="token punctuation">,</span> cust_country<span class="token punctuation">,</span> cust_contact<span class="token punctuation">,</span>
+                      cust_email<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">10004</span><span class="token punctuation">,</span> <span class="token string">'Yosemite Place'</span><span class="token punctuation">,</span> <span class="token string">'829 Riverside Drive'</span><span class="token punctuation">,</span> <span class="token string">'Phoenix'</span><span class="token punctuation">,</span> <span class="token string">'AZ'</span><span class="token punctuation">,</span> <span class="token string">'88888'</span><span class="token punctuation">,</span> <span class="token string">'USA'</span><span class="token punctuation">,</span> <span class="token string">'Y Sam'</span><span class="token punctuation">,</span> <span class="token string">'sam@yosemite.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> customers<span class="token punctuation">(</span>cust_id<span class="token punctuation">,</span> cust_name<span class="token punctuation">,</span> cust_address<span class="token punctuation">,</span> cust_city<span class="token punctuation">,</span> cust_state<span class="token punctuation">,</span> cust_zip<span class="token punctuation">,</span> cust_country<span class="token punctuation">,</span> cust_contact<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">10005</span><span class="token punctuation">,</span> <span class="token string">'E Fudd'</span><span class="token punctuation">,</span> <span class="token string">'4545 53rd Street'</span><span class="token punctuation">,</span> <span class="token string">'Chicago'</span><span class="token punctuation">,</span> <span class="token string">'IL'</span><span class="token punctuation">,</span> <span class="token string">'54545'</span><span class="token punctuation">,</span> <span class="token string">'USA'</span><span class="token punctuation">,</span> <span class="token string">'E Fudd'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">########################</span>
+<span class="token comment"># Populate vendors table</span>
+<span class="token comment">########################</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> vendors<span class="token punctuation">(</span>vend_id<span class="token punctuation">,</span> vend_name<span class="token punctuation">,</span> vend_address<span class="token punctuation">,</span> vend_city<span class="token punctuation">,</span> vend_state<span class="token punctuation">,</span> vend_zip<span class="token punctuation">,</span> vend_country<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">1001</span><span class="token punctuation">,</span> <span class="token string">'Anvils R Us'</span><span class="token punctuation">,</span> <span class="token string">'123 Main Street'</span><span class="token punctuation">,</span> <span class="token string">'Southfield'</span><span class="token punctuation">,</span> <span class="token string">'MI'</span><span class="token punctuation">,</span> <span class="token string">'48075'</span><span class="token punctuation">,</span> <span class="token string">'USA'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> vendors<span class="token punctuation">(</span>vend_id<span class="token punctuation">,</span> vend_name<span class="token punctuation">,</span> vend_address<span class="token punctuation">,</span> vend_city<span class="token punctuation">,</span> vend_state<span class="token punctuation">,</span> vend_zip<span class="token punctuation">,</span> vend_country<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">1002</span><span class="token punctuation">,</span> <span class="token string">'LT Supplies'</span><span class="token punctuation">,</span> <span class="token string">'500 Park Street'</span><span class="token punctuation">,</span> <span class="token string">'Anytown'</span><span class="token punctuation">,</span> <span class="token string">'OH'</span><span class="token punctuation">,</span> <span class="token string">'44333'</span><span class="token punctuation">,</span> <span class="token string">'USA'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> vendors<span class="token punctuation">(</span>vend_id<span class="token punctuation">,</span> vend_name<span class="token punctuation">,</span> vend_address<span class="token punctuation">,</span> vend_city<span class="token punctuation">,</span> vend_state<span class="token punctuation">,</span> vend_zip<span class="token punctuation">,</span> vend_country<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">1003</span><span class="token punctuation">,</span> <span class="token string">'ACME'</span><span class="token punctuation">,</span> <span class="token string">'555 High Street'</span><span class="token punctuation">,</span> <span class="token string">'Los Angeles'</span><span class="token punctuation">,</span> <span class="token string">'CA'</span><span class="token punctuation">,</span> <span class="token string">'90046'</span><span class="token punctuation">,</span> <span class="token string">'USA'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> vendors<span class="token punctuation">(</span>vend_id<span class="token punctuation">,</span> vend_name<span class="token punctuation">,</span> vend_address<span class="token punctuation">,</span> vend_city<span class="token punctuation">,</span> vend_state<span class="token punctuation">,</span> vend_zip<span class="token punctuation">,</span> vend_country<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">1004</span><span class="token punctuation">,</span> <span class="token string">'Furball Inc.'</span><span class="token punctuation">,</span> <span class="token string">'1000 5th Avenue'</span><span class="token punctuation">,</span> <span class="token string">'New York'</span><span class="token punctuation">,</span> <span class="token string">'NY'</span><span class="token punctuation">,</span> <span class="token string">'11111'</span><span class="token punctuation">,</span> <span class="token string">'USA'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> vendors<span class="token punctuation">(</span>vend_id<span class="token punctuation">,</span> vend_name<span class="token punctuation">,</span> vend_address<span class="token punctuation">,</span> vend_city<span class="token punctuation">,</span> vend_state<span class="token punctuation">,</span> vend_zip<span class="token punctuation">,</span> vend_country<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">1005</span><span class="token punctuation">,</span> <span class="token string">'Jet Set'</span><span class="token punctuation">,</span> <span class="token string">'42 Galaxy Road'</span><span class="token punctuation">,</span> <span class="token string">'London'</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'N16 6PS'</span><span class="token punctuation">,</span> <span class="token string">'England'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> vendors<span class="token punctuation">(</span>vend_id<span class="token punctuation">,</span> vend_name<span class="token punctuation">,</span> vend_address<span class="token punctuation">,</span> vend_city<span class="token punctuation">,</span> vend_state<span class="token punctuation">,</span> vend_zip<span class="token punctuation">,</span> vend_country<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">1006</span><span class="token punctuation">,</span> <span class="token string">'Jouets Et Ours'</span><span class="token punctuation">,</span> <span class="token string">'1 Rue Amusement'</span><span class="token punctuation">,</span> <span class="token string">'Paris'</span><span class="token punctuation">,</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span> <span class="token string">'45678'</span><span class="token punctuation">,</span> <span class="token string">'France'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">#########################</span>
+<span class="token comment"># Populate products table</span>
+<span class="token comment">#########################</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'ANV01'</span><span class="token punctuation">,</span> <span class="token number">1001</span><span class="token punctuation">,</span> <span class="token string">'.5 ton anvil'</span><span class="token punctuation">,</span> <span class="token number">5.99</span><span class="token punctuation">,</span> <span class="token string">'.5 ton anvil, black, complete with handy hook'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'ANV02'</span><span class="token punctuation">,</span> <span class="token number">1001</span><span class="token punctuation">,</span> <span class="token string">'1 ton anvil'</span><span class="token punctuation">,</span> <span class="token number">9.99</span><span class="token punctuation">,</span> <span class="token string">'1 ton anvil, black, complete with handy hook and carrying case'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'ANV03'</span><span class="token punctuation">,</span> <span class="token number">1001</span><span class="token punctuation">,</span> <span class="token string">'2 ton anvil'</span><span class="token punctuation">,</span> <span class="token number">14.99</span><span class="token punctuation">,</span> <span class="token string">'2 ton anvil, black, complete with handy hook and carrying case'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'OL1'</span><span class="token punctuation">,</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token string">'Oil can'</span><span class="token punctuation">,</span> <span class="token number">8.99</span><span class="token punctuation">,</span> <span class="token string">'Oil can, red'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'FU1'</span><span class="token punctuation">,</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token string">'Fuses'</span><span class="token punctuation">,</span> <span class="token number">3.42</span><span class="token punctuation">,</span> <span class="token string">'1 dozen, extra long'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'SLING'</span><span class="token punctuation">,</span> <span class="token number">1003</span><span class="token punctuation">,</span> <span class="token string">'Sling'</span><span class="token punctuation">,</span> <span class="token number">4.49</span><span class="token punctuation">,</span> <span class="token string">'Sling, one size fits all'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'TNT1'</span><span class="token punctuation">,</span> <span class="token number">1003</span><span class="token punctuation">,</span> <span class="token string">'TNT (1 stick)'</span><span class="token punctuation">,</span> <span class="token number">2.50</span><span class="token punctuation">,</span> <span class="token string">'TNT, red, single stick'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'TNT2'</span><span class="token punctuation">,</span> <span class="token number">1003</span><span class="token punctuation">,</span> <span class="token string">'TNT (5 sticks)'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">'TNT, red, pack of 10 sticks'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'FB'</span><span class="token punctuation">,</span> <span class="token number">1003</span><span class="token punctuation">,</span> <span class="token string">'Bird seed'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">'Large bag (suitable for road runners)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'FC'</span><span class="token punctuation">,</span> <span class="token number">1003</span><span class="token punctuation">,</span> <span class="token string">'Carrots'</span><span class="token punctuation">,</span> <span class="token number">2.50</span><span class="token punctuation">,</span> <span class="token string">'Carrots (rabbit hunting season only)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'SAFE'</span><span class="token punctuation">,</span> <span class="token number">1003</span><span class="token punctuation">,</span> <span class="token string">'Safe'</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token string">'Safe with combination lock'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'DTNTR'</span><span class="token punctuation">,</span> <span class="token number">1003</span><span class="token punctuation">,</span> <span class="token string">'Detonator'</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token string">'Detonator (plunger powered), fuses not included'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'JP1000'</span><span class="token punctuation">,</span> <span class="token number">1005</span><span class="token punctuation">,</span> <span class="token string">'JetPack 1000'</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token string">'JetPack 1000, intended for single use'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> products<span class="token punctuation">(</span>prod_id<span class="token punctuation">,</span> vend_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price<span class="token punctuation">,</span> prod_desc<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">'JP2000'</span><span class="token punctuation">,</span> <span class="token number">1005</span><span class="token punctuation">,</span> <span class="token string">'JetPack 2000'</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">,</span> <span class="token string">'JetPack 2000, multi-use'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+<span class="token comment">#######################</span>
+<span class="token comment"># Populate orders table</span>
+<span class="token comment">#######################</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orders<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_date<span class="token punctuation">,</span> cust_id<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20005</span><span class="token punctuation">,</span> <span class="token string">'2005-09-01'</span><span class="token punctuation">,</span> <span class="token number">10001</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orders<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_date<span class="token punctuation">,</span> cust_id<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20006</span><span class="token punctuation">,</span> <span class="token string">'2005-09-12'</span><span class="token punctuation">,</span> <span class="token number">10003</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orders<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_date<span class="token punctuation">,</span> cust_id<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20007</span><span class="token punctuation">,</span> <span class="token string">'2005-09-30'</span><span class="token punctuation">,</span> <span class="token number">10004</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orders<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_date<span class="token punctuation">,</span> cust_id<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20008</span><span class="token punctuation">,</span> <span class="token string">'2005-10-03'</span><span class="token punctuation">,</span> <span class="token number">10005</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orders<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_date<span class="token punctuation">,</span> cust_id<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20009</span><span class="token punctuation">,</span> <span class="token string">'2005-10-08'</span><span class="token punctuation">,</span> <span class="token number">10001</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">###########################</span>
+<span class="token comment"># Populate orderitems table</span>
+<span class="token comment">###########################</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20005</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'ANV01'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5.99</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20005</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'ANV02'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9.99</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20005</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'TNT2'</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20005</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'FB'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20006</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'JP2000'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20007</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'TNT2'</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20008</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'FC'</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">2.50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20009</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'FB'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20009</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'OL1'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">8.99</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20009</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'SLING'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4.49</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> orderitems<span class="token punctuation">(</span>order_num<span class="token punctuation">,</span> order_item<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">20009</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'ANV03'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">14.99</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">#############################</span>
+<span class="token comment"># Populate productnotes table</span>
+<span class="token comment">#############################</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">101</span><span class="token punctuation">,</span> <span class="token string">'TNT2'</span><span class="token punctuation">,</span> <span class="token string">'2005-08-17'</span><span class="token punctuation">,</span>
+        <span class="token string">'Customer complaint:
+        Sticks not individually wrapped, too easy to mistakenly detonate all at once.
+        Recommend individual wrapping.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">102</span><span class="token punctuation">,</span> <span class="token string">'OL1'</span><span class="token punctuation">,</span> <span class="token string">'2005-08-18'</span><span class="token punctuation">,</span>
+        <span class="token string">'Can shipped full, refills not available.
+        Need to order new can if refill needed.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">103</span><span class="token punctuation">,</span> <span class="token string">'SAFE'</span><span class="token punctuation">,</span> <span class="token string">'2005-08-18'</span><span class="token punctuation">,</span>
+        <span class="token string">'Safe is combination locked, combination not provided with safe.
+        This is rarely a problem as safes are typically blown up or dropped by customers.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">104</span><span class="token punctuation">,</span> <span class="token string">'FC'</span><span class="token punctuation">,</span> <span class="token string">'2005-08-19'</span><span class="token punctuation">,</span>
+        <span class="token string">'Quantity varies, sold by the sack load.
+        All guaranteed to be bright and orange, and suitable for use as rabbit bait.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">105</span><span class="token punctuation">,</span> <span class="token string">'TNT2'</span><span class="token punctuation">,</span> <span class="token string">'2005-08-20'</span><span class="token punctuation">,</span>
+        <span class="token string">'Included fuses are short and have been known to detonate too quickly for some customers.
+        Longer fuses are available (item FU1) and should be recommended.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">106</span><span class="token punctuation">,</span> <span class="token string">'TNT2'</span><span class="token punctuation">,</span> <span class="token string">'2005-08-22'</span><span class="token punctuation">,</span>
+        <span class="token string">'Matches not included, recommend purchase of matches or detonator (item DTNTR).'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">107</span><span class="token punctuation">,</span> <span class="token string">'SAFE'</span><span class="token punctuation">,</span> <span class="token string">'2005-08-23'</span><span class="token punctuation">,</span>
+        <span class="token string">'Please note that no returns will be accepted if safe opened using explosives.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">108</span><span class="token punctuation">,</span> <span class="token string">'ANV01'</span><span class="token punctuation">,</span> <span class="token string">'2005-08-25'</span><span class="token punctuation">,</span>
+        <span class="token string">'Multiple customer returns, anvils failing to drop fast enough or falling backwards on purchaser. Recommend that customer considers using heavier anvils.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">109</span><span class="token punctuation">,</span> <span class="token string">'ANV03'</span><span class="token punctuation">,</span> <span class="token string">'2005-09-01'</span><span class="token punctuation">,</span>
+        <span class="token string">'Item is extremely heavy. Designed for dropping, not recommended for use with slings, ropes, pulleys, or tightropes.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">110</span><span class="token punctuation">,</span> <span class="token string">'FC'</span><span class="token punctuation">,</span> <span class="token string">'2005-09-01'</span><span class="token punctuation">,</span>
+        <span class="token string">'Customer complaint: rabbit has been able to detect trap, food apparently less effective now.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> <span class="token string">'SLING'</span><span class="token punctuation">,</span> <span class="token string">'2005-09-02'</span><span class="token punctuation">,</span>
+        <span class="token string">'Shipped unassembled, requires common tools (including oversized hammer).'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">112</span><span class="token punctuation">,</span> <span class="token string">'SAFE'</span><span class="token punctuation">,</span> <span class="token string">'2005-09-02'</span><span class="token punctuation">,</span>
+        <span class="token string">'Customer complaint:
+        Circular hole in safe floor can apparently be easily cut with handsaw.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">113</span><span class="token punctuation">,</span> <span class="token string">'ANV01'</span><span class="token punctuation">,</span> <span class="token string">'2005-09-05'</span><span class="token punctuation">,</span>
+        <span class="token string">'Customer complaint:
+        Not heavy enough to generate flying stars around head of victim. If being purchased for dropping, recommend ANV02 or ANV03 instead.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> productnotes<span class="token punctuation">(</span>note_id<span class="token punctuation">,</span> prod_id<span class="token punctuation">,</span> note_date<span class="token punctuation">,</span> note_text<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token number">114</span><span class="token punctuation">,</span> <span class="token string">'SAFE'</span><span class="token punctuation">,</span> <span class="token string">'2005-09-07'</span><span class="token punctuation">,</span>
+        <span class="token string">'Call from individual trapped in safe plummeting to the ground, suggests an escape hatch be added.
+        Comment forwarded to vendor.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>mysql 安装略过,现在有docker很方便的</p> <p>直接进如使用环节</p> <h2 id="sql语句"><a href="#sql语句" class="header-anchor">#</a> sql语句</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># 查看所有的数据库信息</span>
+<span class="token keyword">show</span> <span class="token keyword">databases</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 选择使用哪个数据库</span>
+<span class="token keyword">use</span> mysql<span class="token punctuation">;</span>
+
+<span class="token comment"># 查看所有的表</span>
+<span class="token keyword">show</span> <span class="token keyword">tables</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 查看表的所有字段</span>
+<span class="token keyword">SHOW</span> <span class="token keyword">COLUMNS</span> <span class="token keyword">from</span> <span class="token keyword">user</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 用于显示广泛的服务器状态信息</span>
+<span class="token keyword">SHOW</span> <span class="token keyword">STATUS</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 用来显示服务器错误或警告消息。</span>
+<span class="token keyword">SHOW</span> <span class="token keyword">ERRORS</span><span class="token punctuation">;</span>
+<span class="token keyword">SHOW</span> <span class="token keyword">WARNINGS</span><span class="token punctuation">;</span>
+
+<span class="token comment"># mysql命令行实用程序中，执行命令HELP SHOW;显示允许的SHOW语句。</span>
+<span class="token comment"># HELP SHOW;</span>
+
+<span class="token comment"># 创建一个测试数据库，命名为 haha_test，指定其默认字符集为 utf8，默认校对规则为 utf8_chinese_ci</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">DATABASE</span> <span class="token keyword">IF</span> <span class="token operator">NOT</span> <span class="token keyword">EXISTS</span> haha_test
+    <span class="token keyword">CHARACTER</span> <span class="token keyword">SET</span> utf8
+    <span class="token keyword">COLLATE</span> utf8_general_ci<span class="token punctuation">;</span>
+</code></pre></div><h3 id="select-查询语句"><a href="#select-查询语句" class="header-anchor">#</a> select 查询语句</h3> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># 本文以 供应商 产品  订单 客户 表来举例说明</span>
+
+<span class="token comment"># 1.从products表中检索一个名为prod_name的列。</span>
+
+<span class="token keyword">select</span> prod_name
+<span class="token keyword">from</span> products<span class="token punctuation">;</span>
+
+<span class="token comment"># 2. 检索多个列</span>
+
+<span class="token keyword">select</span> prod_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price
+<span class="token keyword">from</span> products<span class="token punctuation">;</span>
+
+<span class="token comment"># 3. 检索所有列</span>
+<span class="token keyword">select</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> products<span class="token punctuation">;</span>
+
+<span class="token comment"># 4.检索不同的行  供应商和产品表,一共有14个产品,每个产品关联一个供应商,在产品表查询供应商id</span>
+
+<span class="token keyword">select</span> vend_id
+<span class="token keyword">from</span> products<span class="token punctuation">;</span>
+<span class="token comment">#得出14个供应商,但是其实只有4个供应商,有重复的,怎么处理</span>
+
+<span class="token comment"># 使用DISTINCT关键字去掉重复的</span>
+<span class="token keyword">select</span> <span class="token keyword">distinct</span> vend_id
+<span class="token keyword">from</span> products<span class="token punctuation">;</span>
+<span class="token comment"># 不能部分使用DISTINCT DISTINCT关键字应用于所有列而不仅是前置它的列。如果给出SELECT DISTINCT vend_id,prod_price，除非指定的两个列都不同，否则所有行都将被检索出来。</span>
+
+<span class="token comment"># 限制结果</span>
+
+<span class="token keyword">select</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">limit</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 可指定要检索的开始行和行数</span>
+<span class="token comment"># LIMIT 5, 5指示MySQL返回从行5开始的5行。第一个数为开始位置，第二个数为要检索的行数。</span>
+<span class="token keyword">select</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">limit</span> <span class="token number">5</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 使用完全限定的表名  表名.列名  数据库名.表名</span>
+<span class="token keyword">select</span> products<span class="token punctuation">.</span>prod_name
+<span class="token keyword">from</span> haha_test<span class="token punctuation">.</span>products<span class="token punctuation">;</span>
+</code></pre></div><h2 id="order-by-排序语句"><a href="#order-by-排序语句" class="header-anchor">#</a> order by 排序语句</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># 排序 ORDER BY</span>
+
+<span class="token comment">#其实，检索出的数据并不是以纯粹的随机顺序显示的。如果不排</span>
+<span class="token comment"># 序，数据一般将以它在底层表中出现的顺序显示。这可以是数据最初</span>
+<span class="token comment"># 添加到表中的顺序。但是，如果数据后来进行过更新或删除，则此顺</span>
+<span class="token comment"># 序将会受到MySQL重用回收存储空间的影响。因此，如果不明确控</span>
+<span class="token comment"># 制的话，不能（也不应该）依赖该排序顺序。</span>
+
+<span class="token keyword">select</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">order</span> <span class="token keyword">by</span> prod_name<span class="token punctuation">;</span>
+
+
+<span class="token comment"># 按多个列排序</span>
+<span class="token keyword">select</span> prod_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">order</span> <span class="token keyword">by</span> prod_price<span class="token punctuation">,</span> prod_name<span class="token punctuation">;</span>
+
+<span class="token comment"># 重要的是理解在按多个列排序时，排序完全按所规定的顺序进行。</span>
+<span class="token comment"># 换句话说，对于上述例子中的输出，仅在多个行具有相同的prod_price</span>
+<span class="token comment"># 值时才对产品按prod_name进行排序。如果prod_price列中所有的值都是</span>
+<span class="token comment"># 唯一的，则不会按prod_name排序。</span>
+
+<span class="token comment"># 指定排序方向 默认升序,可以降序 desc</span>
+<span class="token keyword">select</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">order</span> <span class="token keyword">by</span> prod_price<span class="token punctuation">;</span>
+<span class="token comment"># 降序</span>
+<span class="token keyword">select</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">order</span> <span class="token keyword">by</span> prod_price <span class="token keyword">desc</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 多个列排序 降序怎么办</span>
+<span class="token keyword">select</span> prod_price<span class="token punctuation">,</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">order</span> <span class="token keyword">by</span> prod_price <span class="token keyword">desc</span><span class="token punctuation">,</span> prod_name<span class="token punctuation">;</span>
+
+
+<span class="token keyword">select</span> prod_price<span class="token punctuation">,</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">order</span> <span class="token keyword">by</span> prod_price <span class="token keyword">desc</span><span class="token punctuation">,</span> prod_name <span class="token keyword">desc</span><span class="token punctuation">;</span>
+<span class="token comment"># DESC关键字只应用到直接位于其前面的列名。在上例中，只对</span>
+<span class="token comment"># prod_price列指定DESC，对prod_name列不指定。因此，</span>
+<span class="token comment"># prod_price列以降序排序，而prod_name列（在每个价格内）仍然按标准</span>
+<span class="token comment"># 的升序排序。</span>
+
+<span class="token comment"># 求出单个列最大值  limit 写在 order by 之后</span>
+<span class="token keyword">select</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">order</span> <span class="token keyword">by</span> prod_price <span class="token keyword">desc</span>
+<span class="token keyword">limit</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="where-条件过滤"><a href="#where-条件过滤" class="header-anchor">#</a> where 条件过滤</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># 条件过滤</span>
+
+<span class="token keyword">select</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_price <span class="token operator">=</span> <span class="token number">2.50</span><span class="token punctuation">;</span>
+
+<span class="token comment"># WHERE子句的位置 在同时使用ORDER BY和WHERE子句时，应</span>
+<span class="token comment"># 该让ORDER BY位于WHERE之后，否则将会产生错误</span>
+
+<span class="token comment"># WHERE子句操作符</span>
+<span class="token comment">/*
+操 作 符   说 明
+=         等于
+&lt;&gt;       不等于
+!=       不等于
+&lt;         小于
+&lt;=       小于等于
+&gt;         大于
+&gt;=       大于等于
+BETWEEN 在指定的两个值之间
+ */</span>
+
+<span class="token comment"># MySQL在执行匹配时默认不区分大小写</span>
+<span class="token keyword">select</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_name <span class="token operator">=</span> <span class="token string">'fuses'</span><span class="token punctuation">;</span>
+
+<span class="token comment">#第一个例子是列出价格小于10美元的所有产品：</span>
+<span class="token keyword">select</span> prod_name<span class="token punctuation">,</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_price <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token comment">#小于等于10美元的所有产品：</span>
+<span class="token keyword">select</span> prod_name<span class="token punctuation">,</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_price <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token comment">#例子列出不是由供应商1003制造的所有产品：</span>
+<span class="token keyword">select</span> vend_id<span class="token punctuation">,</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> vend_id <span class="token operator">&lt;&gt;</span> <span class="token number">1003</span><span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> vend_id<span class="token punctuation">,</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> vend_id <span class="token operator">!=</span> <span class="token number">1003</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 范围值检查 查出价格在 5 和 10 之间的产品</span>
+<span class="token keyword">select</span> prod_name<span class="token punctuation">,</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_price <span class="token operator">between</span> <span class="token number">5</span> <span class="token operator">and</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token comment"># BETWEEN匹配范围中所有的值，包括指定的开始值和结束值。</span>
+
+<span class="token comment"># 空值检查</span>
+<span class="token keyword">select</span> prod_name<span class="token punctuation">,</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_price <span class="token operator">is</span> <span class="token boolean">null</span><span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> cust_id<span class="token punctuation">,</span> cust_email
+<span class="token keyword">from</span> customers
+<span class="token keyword">where</span> cust_email <span class="token operator">is</span> <span class="token boolean">null</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 组合WHERE子句  and or</span>
+
+<span class="token keyword">select</span> prod_id<span class="token punctuation">,</span> prod_name<span class="token punctuation">,</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> vend_id <span class="token operator">=</span> <span class="token number">1003</span>
+  <span class="token operator">and</span> prod_price <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token comment">/*上述例子中使用了只包含一个关键字AND的语句，把两个过滤条件组
+合在一起。还可以添加多个过滤条件，每添加一条就要使用一个AND。
+*/</span>
+<span class="token keyword">select</span> prod_name<span class="token punctuation">,</span> vend_id
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> vend_id <span class="token operator">=</span> <span class="token number">1003</span>
+   <span class="token operator">or</span> vend_id <span class="token operator">=</span> <span class="token number">1002</span><span class="token punctuation">;</span>
+
+
+<span class="token comment"># WHERE可包含任意数目的AND和OR操作符。允许两者结合以进行复杂和高级的过滤。</span>
+
+<span class="token comment"># 假如需要列出价格为10美元（含）以上且由1002或1003制造的所有产品。</span>
+<span class="token keyword">select</span> vend_id<span class="token punctuation">,</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> vend_id <span class="token operator">=</span> <span class="token number">1002</span>
+   <span class="token operator">or</span> vend_id <span class="token operator">=</span> <span class="token number">1003</span> <span class="token operator">and</span> prod_price <span class="token operator">&gt;=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token comment">/*
+ 1003,13.00
+1003,10.00
+1002,3.42
+1002,8.99
+1003,50.00
+1003,10.00
+ */</span>
+<span class="token comment">#  查询结果中有prod_price小于10的数据</span>
+<span class="token comment"># 返回的行未按预期的进行过滤。为什么会这样呢？原因在于计</span>
+<span class="token comment"># 算的次序。SQL（像多数语言一样）在处理OR操作符前，优先处理AND操</span>
+<span class="token comment"># 作符。当SQL看到上述WHERE子句时，它理解为由供应商1003制造的任何</span>
+<span class="token comment"># 价格为10美元（含）以上的产品，或者由供应商1002制造的任何产品，</span>
+<span class="token comment"># 而不管其价格如何。换句话说，由于AND在计算次序中优先级更高，操作</span>
+<span class="token comment"># 符被错误地组合了。</span>
+
+<span class="token keyword">select</span> vend_id<span class="token punctuation">,</span> prod_price
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> <span class="token punctuation">(</span>vend_id <span class="token operator">=</span> <span class="token number">1002</span>
+    <span class="token operator">or</span> vend_id <span class="token operator">=</span> <span class="token number">1003</span><span class="token punctuation">)</span>
+  <span class="token operator">and</span> prod_price <span class="token operator">&gt;=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 使用() 提升优先级</span>
+
+<span class="token comment"># IN操作符</span>
+<span class="token keyword">select</span> vend_id<span class="token punctuation">,</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> vend_id <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1003</span><span class="token punctuation">)</span>
+<span class="token keyword">order</span> <span class="token keyword">by</span> prod_name<span class="token punctuation">;</span>
+
+<span class="token comment"># NOT操作符</span>
+<span class="token keyword">select</span> vend_id<span class="token punctuation">,</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> vend_id <span class="token operator">not</span> <span class="token operator">in</span> <span class="token punctuation">(</span><span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1003</span><span class="token punctuation">)</span>
+<span class="token keyword">order</span> <span class="token keyword">by</span> prod_name<span class="token punctuation">;</span>
+
+<span class="token comment"># LIKE操作符</span>
+
+<span class="token comment">#百分号（%）通配符</span>
+<span class="token comment"># 最常使用的通配符是百分号（%）。在搜索串中，%表示任何字符出现</span>
+<span class="token comment"># 任意次数。例如，为了找出所有以词jet起头的产品，可使用以下SELECT</span>
+<span class="token comment"># 语句：</span>
+<span class="token keyword">select</span> prod_id<span class="token punctuation">,</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_name <span class="token operator">like</span> <span class="token string">'jet%'</span><span class="token punctuation">;</span>
+<span class="token comment"># 此例子使用了搜索模式'jet%'。在执行这条子句时，将检索任</span>
+<span class="token comment"># 意以jet起头的词。%告诉MySQL接受jet之后的任意字符，不</span>
+<span class="token comment"># 管它有多少字符。</span>
+<span class="token keyword">select</span> prod_id<span class="token punctuation">,</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_name <span class="token operator">like</span> <span class="token string">'%anvil%'</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 搜索模式'%anvil%'表示匹配任何位置包含文本anvil的值，而</span>
+<span class="token comment"># 不论它之前或之后出现什么字符。</span>
+
+<span class="token comment"># 找出以s起头以e结尾的所有产品：</span>
+<span class="token keyword">select</span> prod_id<span class="token punctuation">,</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_name <span class="token operator">like</span> <span class="token string">'s%e'</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 注意NULL 虽然似乎%通配符可以匹配任何东西，但有一个例</span>
+<span class="token comment"># 外，即NULL。即使是WHERE prod_name LIKE '%'也不能匹配</span>
+<span class="token comment"># 用值NULL作为产品名的行。</span>
+
+<span class="token comment">#下划线（_）通配符</span>
+<span class="token comment">#另一个有用的通配符是下划线（_）。下划线的用途与%一样，但下划线只匹配单个字符而不是多个字符。</span>
+<span class="token keyword">select</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_name <span class="token operator">like</span> <span class="token string">'_ ton anvil'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_name <span class="token operator">like</span> <span class="token string">'% ton anvil'</span><span class="token punctuation">;</span>
+
+<span class="token comment">/*
+不要过度使用通配符。如果其他操作符能达到相同的目的，应该
+使用其他操作符。
+ 在确实需要使用通配符时，除非绝对有必要，否则不要把它们用
+在搜索模式的开始处。把通配符置于搜索模式的开始处，搜索起
+来是最慢的。
+ 仔细注意通配符的位置。如果放错地方，可能不会返回想要的数据
+*/</span>
+
+<span class="token comment"># 正则表达式 REGEXP</span>
+<span class="token keyword">select</span> prod_name
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> prod_name <span class="token operator">REGEXP</span> <span class="token string">'1000'</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="函数"><a href="#函数" class="header-anchor">#</a> 函数</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># sql 函数</span>
+
+<span class="token comment"># 字符串处理相关</span>
+
+<span class="token comment"># 1. 字符串拼接 MySQL则使用Concat()函数来实现。</span>
+<span class="token keyword">select</span> concat<span class="token punctuation">(</span>vend_name<span class="token punctuation">,</span> <span class="token string">'('</span><span class="token punctuation">,</span> vend_country<span class="token punctuation">,</span> <span class="token string">')'</span><span class="token punctuation">)</span>
+<span class="token keyword">from</span> vendors
+<span class="token keyword">order</span> <span class="token keyword">by</span> vend_name<span class="token punctuation">;</span>
+
+<span class="token comment"># 2.去掉空格 RTrim()去掉右边的空格，LTrim()（去掉串左边的空格）以及Trim()（去掉串左右两边的空格）。</span>
+<span class="token keyword">select</span> concat<span class="token punctuation">(</span>RTRIM<span class="token punctuation">(</span>vend_name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'('</span><span class="token punctuation">,</span> RTRIM<span class="token punctuation">(</span>vend_country<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">')'</span><span class="token punctuation">)</span>
+<span class="token keyword">from</span> vendors
+<span class="token keyword">order</span> <span class="token keyword">by</span> vend_name<span class="token punctuation">;</span>
+
+<span class="token comment"># 3. 使用别名 as</span>
+<span class="token keyword">select</span> concat<span class="token punctuation">(</span>RTRIM<span class="token punctuation">(</span>vend_name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'('</span><span class="token punctuation">,</span> RTRIM<span class="token punctuation">(</span>vend_country<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">')'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> vend_title
+<span class="token keyword">from</span> vendors
+<span class="token keyword">order</span> <span class="token keyword">by</span> vend_name<span class="token punctuation">;</span>
+
+<span class="token comment"># 4. 转大写</span>
+<span class="token keyword">select</span> vend_name<span class="token punctuation">,</span> UPPER<span class="token punctuation">(</span>vend_name<span class="token punctuation">)</span>
+<span class="token keyword">from</span> vendors
+<span class="token keyword">order</span> <span class="token keyword">by</span> vend_name<span class="token punctuation">;</span>
+
+<span class="token comment">/*
+Left() 返回串左边的字符
+Length() 返回串的长度
+Locate() 找出串的一个子串
+Lower() 将串转换为小写
+LTrim() 去掉串左边的空格
+Right() 返回串右边的字符
+ */</span>
+
+<span class="token comment"># 数字处理相关</span>
+
+<span class="token comment">/*
+Abs() 返回一个数的绝对值
+Cos() 返回一个角度的余弦
+Exp() 返回一个数的指数值
+Mod() 返回除操作的余数
+Pi() 返回圆周率
+Rand() 返回一个随机数
+Sin() 返回一个角度的正弦
+Sqrt() 返回一个数的平方根
+Tan() 返回一个角度的正切
+ */</span>
+
+<span class="token comment"># 1. 计算  查询 订单信息</span>
+
+<span class="token keyword">select</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price
+<span class="token keyword">from</span> orderitems
+<span class="token keyword">where</span> order_num <span class="token operator">=</span> <span class="token number">20005</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 计算总价</span>
+<span class="token keyword">select</span> prod_id<span class="token punctuation">,</span> quantity<span class="token punctuation">,</span> item_price<span class="token punctuation">,</span> quantity <span class="token operator">*</span> item_price <span class="token keyword">as</span> expanded_price
+<span class="token keyword">from</span> orderitems
+<span class="token keyword">where</span> order_num <span class="token operator">=</span> <span class="token number">20005</span><span class="token punctuation">;</span>
+
+
+
+<span class="token comment"># 日期处理相关</span>
+<span class="token comment">/*
+AddDate() 增加一个日期（天、周等）
+AddTime() 增加一个时间（时、分等）
+CurDate() 返回当前日期
+CurTime() 返回当前时间
+Date() 返回日期时间的日期部分
+DateDiff() 计算两个日期之差
+Date_Add() 高度灵活的日期运算函数
+Date_Format() 返回一个格式化的日期或时间串
+Day() 返回一个日期的天数部分
+DayOfWeek() 对于一个日期，返回对应的星期几
+Hour() 返回一个时间的小时部分
+Minute() 返回一个时间的分钟部分
+Month() 返回一个日期的月份部分
+Now() 返回当前日期和时间
+Second() 返回一个时间的秒部分
+Time() 返回一个日期时间的时间部分
+Year() 返回一个日期的年份部分
+ */</span>
+
+<span class="token comment"># 聚集函数</span>
+
+<span class="token comment">/*
+AVG() 返回某列的平均值
+COUNT() 返回某列的行数
+MAX() 返回某列的最大值
+MIN() 返回某列的最小值
+SUM() 返回某列值之和
+ */</span>
+
+<span class="token comment"># avg  AVG()函数忽略列值为NULL的行。</span>
+<span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>prod_price<span class="token punctuation">)</span>
+<span class="token keyword">from</span> products<span class="token punctuation">;</span>
+
+<span class="token comment"># COUNT()函数有两种使用方式。</span>
+<span class="token comment"># 1. 使用COUNT(*)对表中行的数目进行计数，不管表列中包含的是空值（NULL）还是非空值。</span>
+<span class="token comment"># 2. 使用COUNT(column)对特定列中具有值的行进行计数，忽略NULL值。</span>
+
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> num_cust
+<span class="token keyword">from</span> customers<span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>cust_email<span class="token punctuation">)</span> <span class="token keyword">as</span> num_cust
+<span class="token keyword">from</span> customers<span class="token punctuation">;</span>
+
+
+<span class="token comment"># MAX 返回最大值</span>
+
+<span class="token keyword">select</span> <span class="token function">max</span><span class="token punctuation">(</span>prod_price<span class="token punctuation">)</span>
+<span class="token keyword">from</span> products<span class="token punctuation">;</span>
+
+<span class="token comment"># MIN 返回最小值</span>
+
+<span class="token keyword">select</span> <span class="token function">min</span><span class="token punctuation">(</span>prod_price<span class="token punctuation">)</span>
+<span class="token keyword">from</span> products<span class="token punctuation">;</span>
+
+<span class="token comment"># sum 总计</span>
+
+<span class="token keyword">select</span> <span class="token function">sum</span><span class="token punctuation">(</span>prod_price<span class="token punctuation">)</span>
+<span class="token keyword">from</span> products<span class="token punctuation">;</span>
+</code></pre></div><h2 id="分组"><a href="#分组" class="header-anchor">#</a> 分组</h2> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment"># 分组 group by</span>
+
+<span class="token comment"># 单条查询结果</span>
+<span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> num_prods
+<span class="token keyword">from</span> products
+<span class="token keyword">where</span> vend_id <span class="token operator">=</span> <span class="token number">1003</span><span class="token punctuation">;</span>
+
+<span class="token comment"># 求所有的vend_id 的商品数量怎么算  分组，</span>
+<span class="token keyword">select</span> vend_id<span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> num_prods
+<span class="token keyword">from</span> products
+<span class="token keyword">group</span> <span class="token keyword">by</span> vend_id<span class="token punctuation">;</span>
+
+<span class="token comment">/*
+在具体使用GROUP BY子句前，需要知道一些重要的规定。
+ GROUP BY子句可以包含任意数目的列。这使得能对分组进行嵌套，
+为数据分组提供更细致的控制。
+ 如果在GROUP BY子句中嵌套了分组，数据将在最后规定的分组上
+进行汇总。换句话说，在建立分组时，指定的所有列都一起计算
+（所以不能从个别的列取回数据）。
+ GROUP BY子句中列出的每个列都必须是检索列或有效的表达式
+（但不能是聚集函数）。如果在SELECT中使用表达式，则必须在
+GROUP BY子句中指定相同的表达式。不能使用别名。
+ 除聚集计算语句外，SELECT语句中的每个列都必须在GROUP BY子
+句中给出。
+ 如果分组列中具有NULL值，则NULL将作为一个分组返回。如果列
+中有多行NULL值，它们将分为一组。
+ GROUP BY子句必须出现在WHERE子句之后，ORDER BY子句之前。
+ */</span>
+
+
+<span class="token comment"># 过滤分组</span>
+<span class="token comment"># MySQL还允许过滤分组，规定包括哪些分组，排除哪些分组。 HAVING子句</span>
+
+<span class="token keyword">select</span> cust_id<span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> orders
+<span class="token keyword">from</span> orders
+<span class="token keyword">group</span> <span class="token keyword">by</span> cust_id<span class="token punctuation">;</span>
+
+<span class="token keyword">select</span> cust_id<span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">as</span> orders
+<span class="token keyword">from</span> orders
+<span class="token keyword">group</span> <span class="token keyword">by</span> cust_id
+<span class="token keyword">having</span> orders <span class="token operator">&gt;=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token comment"># 2次sql 对比,在分组的基础上再次进行过滤</span>
+
+</code></pre></div><h2 id="连接和子查询"><a href="#连接和子查询" class="header-anchor">#</a> 连接和子查询</h2> <p>join 和 in(select table)</p> <h2 id="insert"><a href="#insert" class="header-anchor">#</a> insert</h2> <p>insert table (...) values ()
+insert table (...) values (select xxx)</p> <h2 id="update"><a href="#update" class="header-anchor">#</a> update</h2> <p>update table set xx =xx where xx=xx</p> <h2 id="delete"><a href="#delete" class="header-anchor">#</a> delete</h2> <p>delete table where xx =xx</p> <h2 id="存储过程"><a href="#存储过程" class="header-anchor">#</a> 存储过程</h2> <p>begin
+...
+end</p> <h2 id="事务"><a href="#事务" class="header-anchor">#</a> 事务</h2> <p>set autoCommit = 0;
+start
+select
+update
+insert
+delete
+rollback
+end</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/to-be-bast/web/springmvc.html" class="prev">
+        springMvc
+      </a></span> <span class="next"><a href="/to-be-bast/db/mysql2.html">
+        高性能mysql
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/to-be-bast/assets/js/app.c3e67182.js" defer></script><script src="/to-be-bast/assets/js/2.a97ad3d5.js" defer></script><script src="/to-be-bast/assets/js/45.c0542bf1.js" defer></script>
+  </body>
+</html>
